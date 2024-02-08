@@ -1,30 +1,52 @@
 @import 'utils/variables';
 @import 'components/type';
 
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
 body {
-    background: #344;
-    padding: 25px
+    background: #D4AC89;
+}
+
+.container{
+    display:flex;
+    height:100%;
+    width:100%;
 }
 
 .paper {
+    margin:30px;
     position: relative;
-    height: 400px;
-    width: 400px;
+    width:100%;
     padding: 25px;
-    background: #fff
+    background: #FFF5C0;
+    box-sizing: border-box;
 }
 
-.paper::before {
+.corner {
+    margin:30px;
     content:"";
     position: absolute;
-    top: 0px;
-    right: 0px;
+    left: 0px;
+    bottom: 0px;
     border-style: solid;
-    border-width: 0 100px 100px 0;
-    border-color: #ddd #344;
+    border-width: 100px 0 0 100px;
+    border-color: #D8CFA1 #D4AC89;
     transition: all ease 0.5s;
+    z-index:1;
 }
-.animate-paper::before {
-    border-width: 0 250px 250px 0;
-    border-color: #eee #344
+
+.corner:not(.animate-paper):hover {
+    border-width: 150px 0 0 150px;
+    border-color: #D8CFA1 #D4AC89
 }
+
+.animate-paper {
+    border-width: 50vh 0 0 50vw;
+    border-color: #D8CFA1 #D4AC89
+}
+
