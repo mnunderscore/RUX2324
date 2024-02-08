@@ -1,2 +1,53 @@
 @import 'utils/variables';
 @import 'components/type';
+
+body{
+    background:green;
+}
+#slider-container{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+.square-back-1, .square-back-2, .square-back-3, .square-back-4{
+    background: grey;
+}
+
+.bigsquare{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fold, .square-back-1, .square-back-2, .square-back-3, .square-back-4{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index:0;
+}
+
+.image1 .fold{
+    background-color: aqua;
+}
+
+.fold.image1-2, .square-back-2{
+    right: 0;
+    background-position-x:100%;
+}
+
+.fold.image1-3, .square-back-3{
+    bottom: 0;
+    background-position-y: bottom;
+}
+
+.fold.image1-4, .square-back-4{
+    bottom: 0;
+    right: 0;
+    background-position: 100% 100%;
+}
+.fold, .top{
+    cursor:pointer;
+}
+
