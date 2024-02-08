@@ -38,6 +38,7 @@ body {
     border-color: #D8CFA1 #D4AC89;
     transition: all ease 0.5s;
     z-index:1;
+    box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
 }
 
 .corner:not(.animate-paper):hover {
