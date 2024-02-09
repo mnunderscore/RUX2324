@@ -6,6 +6,7 @@ html, body{
     padding:0;
     height:100%;
     width:100%;
+    overflow: hidden;
 }
 
 body {
@@ -16,19 +17,20 @@ body {
     display:flex;
     height:100%;
     width:100%;
+    flex-direction: column;
 }
 
 .paper {
     margin:30px;
     position: relative;
-    width:100%;
     padding: 25px;
     background-color: #FFF5C0;
     box-sizing: border-box;
+    flex-grow: 1;
 }
 
 .corner {
-    margin:30px;
+    margin: 30px 30px calc(40px + 30px) 30px;
     height: 100px;
     width: 100px;
     content:"";
@@ -44,17 +46,12 @@ body {
     &:not(.animate-paper):hover {
         height: 125px;
         width: 125px;
-
-        .home {
-            bottom: 25px;
-            left: 25px;
-        }
     }
 
     .home {
         // retirer pour ne pas animer l'icone
         fill: none;
-        stroke: #000;
+        stroke: #fff;
         stroke-width: 2;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -65,8 +62,8 @@ body {
         //
         transition: all ease-in-out 0.5s;
         position: absolute;
-        bottom: 15px;
-        left: 15px;
+        top: 10px;
+        right: 10px;
         height: 35px;
         width: 35px;
     }
@@ -83,12 +80,18 @@ to {
 }
 
 .animate-paper {
-    height: 300px;
-    width: 300px;
+    height: 2000px;
+    width: 2000px;
 
     .home {
-        bottom: 25px;
-        left: 25px;
+        top: 25px;
+        right: 25px;
     }
+}
+
+.footer {
+    text-align: center;
+    margin: 10px 30px 10px 30px;
+    height:20px;
 }
 
