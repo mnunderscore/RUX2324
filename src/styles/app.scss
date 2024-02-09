@@ -13,6 +13,15 @@ body {
     background: #D4AC89;
 }
 
+.pince {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -55px);
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+}
+
 .container{
     display:flex;
     height:100%;
@@ -21,16 +30,31 @@ body {
 }
 
 .paper {
-    margin:30px;
+    margin:50px 30px 30px 30px;
     position: relative;
-    padding: 25px;
+    padding: 20px 6% 20px 6%;
     background-color: #FFF5C0;
-    box-sizing: border-box;
     flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    
+    .top-half{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content{
+            width: 65%;
+        }
+    }
 }
 
 .corner {
-    margin: 30px 30px calc(40px + 30px) 30px;
+    margin: 50px 30px calc(40px + 30px) 30px;
     height: 100px;
     width: 100px;
     content:"";
@@ -52,13 +76,13 @@ body {
         // retirer pour ne pas animer l'icone
         fill: none;
         stroke: #fff;
-        stroke-width: 2;
+        stroke-width: 5;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-dasharray: 1700;
         stroke-dashoffset: 1700;
-        -webkit-animation: dash 20s linear forwards;
-        animation: dash 20s linear forwards;
+        -webkit-animation: dash 10s linear forwards;
+        animation: dash 10s linear forwards;
         //
         transition: all ease-in-out 0.5s;
         position: absolute;
