@@ -119,3 +119,36 @@ to {
     height:20px;
 }
 
+.nav {
+    display:flex;
+    margin: 50px 30px calc(40px + 30px) 30px;
+    content:"";
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    z-index:5;
+    flex-direction: column;
+    height:0;
+    opacity:0;
+    overflow:hidden;
+    transition: opacity ease-in-out 0.5s, height ease-in-out 0.5s;
+
+    a{
+        margin: 10px 0;
+        font-size: 1.802rem;
+        text-decoration: none;
+        color: #000;
+        transition: color ease-in-out 0.2s;
+    }
+
+    a:hover{
+        color: #FFF5C0;
+    }
+}
+
+
+.toggleVisibility {
+    height: 200px;
+    opacity: 1;
+    transition: opacity ease-in-out 0.5s, height ease-in-out 0.5s;
+}
