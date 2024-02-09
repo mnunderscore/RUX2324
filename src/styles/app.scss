@@ -23,31 +23,52 @@ body {
     position: relative;
     width:100%;
     padding: 25px;
-    background: #FFF5C0;
+    background-color: #FFF5C0;
     box-sizing: border-box;
 }
 
 .corner {
     margin:30px;
+    height: 100px;
+    width: 100px;
     content:"";
     position: absolute;
     left: 0px;
     bottom: 0px;
-    border-style: solid;
-    border-width: 100px 0 0 100px;
-    border-color: #D8CFA1 #D4AC89;
+    background-color: #D4AC89;
+    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
     transition: all ease 0.5s;
-    z-index:1;
+    z-index: 1;
     box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
-}
 
-.corner:not(.animate-paper):hover {
-    border-width: 150px 0 0 150px;
-    border-color: #D8CFA1 #D4AC89
+    &:not(.animate-paper):hover {
+        height: 125px;
+        width: 125px;
+
+        .home {
+            bottom: 25px;
+            left: 25px;
+        }
+    }
+
+    .home {
+        transition: all ease 0.5s;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        height: 30px;
+        width: 30px;
+        fill: #FFF5C0;
+    }
 }
 
 .animate-paper {
-    border-width: 350px 0 0 350px;
-    border-color: #D8CFA1 #D4AC89
+    height: 300px;
+    width: 300px;
+
+    .home {
+        bottom: 25px;
+        left: 25px;
+    }
 }
 
