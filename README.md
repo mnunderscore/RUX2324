@@ -20,8 +20,3 @@
 - `npx mix watch` : build on files changes, launch a dev server with browsersync.
 - `npm run build` : clean, lint and build the project.
 - `npm run clean` : clean the `dist` folder.
-
-### Warning
-
-Not intended to be used in production since minification as been disabled.  
-For school project purpose only. -->
