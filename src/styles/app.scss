@@ -114,6 +114,10 @@ body {
     }
 }
 
+.post-it__corner :hover {
+    cursor: pointer;
+}
+
 .post-it__nav {
     width:100%;
     position: absolute;
@@ -191,6 +195,13 @@ body {
             font: inherit;
             border-radius: 0;
             appearance: none;
+
+            .prevBtn, .nextBtn :hover {
+                cursor: pointer;
+                -ms-transform: scale(1.5); /* IE 9 */
+                -webkit-transform: scale(1.5); /* Safari 3-8 */
+                transform: scale(1.5);
+            }
 
             svg{
                 width:25px;
