@@ -36,7 +36,7 @@ body {
 .post-it__paper {
     margin:25px;
     position: relative;
-    padding: 20px 80px 20px 80px;
+    padding: 20px 120px 20px 120px;
     background-color: $post-it-1;
     flex-grow: 1;
     display:flex;
@@ -57,7 +57,7 @@ body {
     }
 
     .post-it__sub-content{
-        width: 66.6%;
+        width: 33.3%;
     }
 
     .post-it__corner {
@@ -241,4 +241,3 @@ body {
 @media only screen and (min-width: 1201px) {
 
 }
-
