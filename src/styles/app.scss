@@ -24,15 +24,6 @@ body {
     background: $background-color;
 }
 
-.pince {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -55px);
-    width: 200px;
-    height: 200px;
-    z-index: 3;
-}
-
 .post-it{
     display:flex;
     height:100%;
