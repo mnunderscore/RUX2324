@@ -108,6 +108,7 @@ body {
             transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
             .post-it__homeicon {
+                display:none;
                 top: 25px;
                 right: 25px;
             }
