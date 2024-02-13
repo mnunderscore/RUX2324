@@ -169,7 +169,7 @@ body {
 
     .footer__nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         width:100%;
 
         .prevBtn, .nextBtn {
@@ -189,3 +189,10 @@ body {
         }
     }
 }
+
+// @media (max-width: 768px) {
+//     .post-it__paper {
+//         margin: 10px;
+//         padding: 20px 6% 20px 6%;
+//     }
+// }
