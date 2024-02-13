@@ -13,8 +13,6 @@ function toggleVisibility() {
     navElement.classList.toggle('--toggleVisibility');
 }
 
-
-
 // Attach the onclick event to trigger the animation
 document.addEventListener('DOMContentLoaded', () => {
     const cornerElement = document.querySelector('.post-it__corner');
