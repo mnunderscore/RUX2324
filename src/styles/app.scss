@@ -36,7 +36,7 @@ body {
 .post-it__paper {
     margin:25px;
     position: relative;
-    padding: 20px 6% 20px 6%;
+    padding: 20px 80px 20px 80px;
     background-color: $post-it-1;
     flex-grow: 1;
     display:flex;
@@ -59,57 +59,57 @@ body {
     .post-it__sub-content{
         width: 66.6%;
     }
-}
 
-.post-it__corner {
-    height: 100px;
-    width: 100px;
-    content:"";
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    background-color: $background-color;
-    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
-    transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-    z-index: 1;
-    box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
-
-    &:not(.--animatecorner):hover {
-        // TODO corriger le hover pour que l'animation ne se lance pas PENDANT une autre animation (wtf)
-        height: 125px;
-        width: 125px;
-    }
-
-    .post-it__homeicon {
-        // retirer pour ne pas animer l'icone
-        fill: none;
-        stroke: $text-color;
-        stroke-width: 5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-dasharray: 1700;
-        stroke-dashoffset: 1700;
-        -webkit-animation: dash 10s linear forwards;
-        animation: dash 10s linear forwards;
-        //
-        transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+    .post-it__corner {
+        height: 100px;
+        width: 100px;
+        content:"";
         position: absolute;
-        top: 10px;
-        right: 10px;
-        height: 35px;
-        width: 35px;
-    }
-
-    &.--animatecorner {
-        height: 100%;
-        width: 100%;
-        background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%);
-        box-shadow: 0 0 0 0 rgba(0,0,0,0);
+        left: 0px;
+        bottom: 0px;
+        background-color: $background-color;
+        background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
         transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+        z-index: 1;
+        box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
+
+        &:not(.--animatecorner):hover {
+            // TODO corriger le hover pour que l'animation ne se lance pas PENDANT une autre animation (wtf)
+            height: 125px;
+            width: 125px;
+        }
 
         .post-it__homeicon {
-            top: 25px;
-            right: 25px;
+            // retirer pour ne pas animer l'icone
+            fill: none;
+            stroke: $text-color;
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1700;
+            stroke-dashoffset: 1700;
+            -webkit-animation: dash 10s linear forwards;
+            animation: dash 10s linear forwards;
+            //
+            transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 35px;
+            width: 35px;
+        }
+
+        &.--animatecorner {
+            height: 100%;
+            width: 100%;
+            background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%);
+            box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+
+            .post-it__homeicon {
+                top: 25px;
+                right: 25px;
+            }
         }
     }
 }
@@ -207,6 +207,7 @@ body {
 }
 
 @media only screen and (min-width: 1201px) {
+
 
 }
 
