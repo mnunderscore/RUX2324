@@ -8,14 +8,18 @@ body{
     color: $text-color;
 }
 
-.title, .post-it__nav{
+.title, .post-it__nav a{
     font-family: 'Shantell Sans', sans-serif;
     font-size: 2.37em;
     margin-bottom: 0.5em;
     margin-top: 0.5em;
+
+    &.post-it__nav{
+        font-weight: 800;
+    }
 }
 
 .footer{
-    font-size: .75rem;
+    font-size: 1em;
     font-weight: 400;
 }

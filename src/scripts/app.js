@@ -5,6 +5,7 @@ import $ from 'jquery';
 function animateCorner() {
     const cornerElement = document.querySelector('.post-it__corner');
     cornerElement.classList.toggle('--animatecorner');
+    setTimeout(byebye, 600)
 }
 
 function toggleVisibility() {
@@ -12,9 +13,17 @@ function toggleVisibility() {
     navElement.classList.toggle('--toggleVisibility');
 }
 
+
+
 // Attach the onclick event to trigger the animation
 document.addEventListener('DOMContentLoaded', () => {
     const cornerElement = document.querySelector('.post-it__corner');
+    cornerElement.addEventListener('click', animateCorner);
+    cornerElement.addEventListener('click', toggleVisibility);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cornerElement = document.querySelector('.close');
     cornerElement.addEventListener('click', animateCorner);
     cornerElement.addEventListener('click', toggleVisibility);
 });
