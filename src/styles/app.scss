@@ -1,6 +1,18 @@
 @import 'utils/variables';
 @import 'components/type';
 
+
+@-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+    @keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+
 html, body{
     margin:0;
     padding:0;
@@ -10,7 +22,7 @@ html, body{
 }
 
 body {
-    background: #D4AC89;
+    background: $background-color;
 }
 
 .pince {
@@ -28,14 +40,15 @@ body {
     width:100%;
     flex-direction: column;
     justify-content: flex-end;
+
 }
 
 .post-it__paper {
-    margin:50px 30px 30px 30px;
+    margin:50px 30px 20px 30px;
     position: relative;
     padding: 20px 6% 20px 6%;
-    background-color: #FFF5C0;
-    // flex-grow: 1;
+    background-color: $post-it-1;
+    flex-grow: 1;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -55,14 +68,14 @@ body {
 }
 
 .post-it__corner {
-    margin: 50px 30px calc(40px + 45.2px) 30px;
+    margin: 50px 30px 80px 30px;
     height: 100px;
     width: 100px;
     content:"";
     position: absolute;
     left: 0px;
     bottom: 0px;
-    background-color: #D4AC89;
+    background-color: $background-color;
     background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
     transition: all ease-in-out 0.5s;
     z-index: 1;
@@ -76,7 +89,7 @@ body {
     .post-it__homeicon {
         // retirer pour ne pas animer l'icone
         fill: none;
-        stroke: #000;
+        stroke: $text-color;
         stroke-width: 5;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -93,36 +106,10 @@ body {
         width: 35px;
     }
 }
-@-webkit-keyframes dash {
-to {
-    stroke-dashoffset: 0;
-}
-}
-@keyframes dash {
-to {
-    stroke-dashoffset: 0;
-}
-}
-
-.--animatecorner {
-    height: 600px;
-    width: 600px;
-
-    .post-it__homeicon {
-        top: 25px;
-        right: 25px;
-    }
-}
-
-.footer {
-    text-align: center;
-    margin: 10px 30px 10px 30px;
-    height:auto;
-}
 
 .post-it__nav {
     display:flex;
-    margin: 50px 30px calc(40px + 30px) 30px;
+    margin: 50px 30px 80px 30px;
     content:"";
     position: absolute;
     left: 25px;
@@ -138,15 +125,49 @@ to {
         margin: 10px 0;
         font-size: 1.802rem;
         text-decoration: none;
-        color: #000;
+        color: $text-color;
         transition: color ease-in-out 0.2s;
     }
 
     a:hover{
-        color: #FFF5C0;
+        color: $post-it-1;
     }
 }
 
+.--animatecorner {
+    height: 500px;
+    width: 500px;
+
+    .post-it__homeicon {
+        top: 25px;
+        right: 25px;
+    }
+}
+
+.footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 30px 20px 30px;
+
+    .footer__copyright {
+        height:20px;
+        background-color: $post-it-2;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+        width:100%;
+        padding: 10px 20px 10px 20px;
+        margin-right:25px;
+    }
+
+    .footer__socials{
+        height:20px;
+        background-color: $post-it-3;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+        width:25%;
+        padding: 10px 20px 10px 20px;
+    }
+}
 
 .--toggleVisibility {
     height: 200px;
