@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     cornerElement.addEventListener('click', animateCorner);
     cornerElement.addEventListener('click', toggleVisibility);
 });
+
+// TODO intégrer slider
