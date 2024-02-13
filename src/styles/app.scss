@@ -173,17 +173,18 @@ body {
         width:100%;
 
         .prevBtn, .nextBtn {
+            background-color: transparent;
             border: none;
-            background-color: none;
-            color: none;
+            margin: 0;
+            padding: 0;
+            text-align: inherit;
+            font: inherit;
+            border-radius: 0;
+            appearance: none;
 
-            &:focus {
-                border: none;
-                outline: none;
-            }
-
-            &:focus{
-                outline:none !important;
+            svg{
+                width:25px;
+                height:25px;
             }
         }
     }
