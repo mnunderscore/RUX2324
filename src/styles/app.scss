@@ -54,6 +54,10 @@ body {
         .post-it__sub-content{
             width: 66.6%;
         }
+
+        .logo {
+            width: 25%;
+        }
     }
 
     .post-it__sub-content{
@@ -156,13 +160,17 @@ body {
     }
 
     &.--toggleVisibility {
+        display: flex;
+        justify-content: center;
         height: 100%;
         opacity: 1;
         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
         .close {
-            margin: 0 0 20px 0;
             cursor: pointer;
+            position: fixed;
+            top: 50px;
+            right: 60px;
         }
     }
 }
