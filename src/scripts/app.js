@@ -5,7 +5,6 @@ import $ from 'jquery';
 function animateCorner() {
     const cornerElement = document.querySelector('.post-it__corner');
     cornerElement.classList.toggle('--animatecorner');
-    setTimeout(byebye, 600)
 }
 
 function toggleVisibility() {
