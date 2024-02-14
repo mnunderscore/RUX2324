@@ -2,6 +2,8 @@
 // Import jQuery
 import $ from 'jquery';
 
+// TODO: supprimer code inutile si il n'est pas utilisé
+
 // function animateCorner() {
 //     const cornerElement = document.querySelector('.post-it__corner');
 //     cornerElement.classList.toggle('--animatecorner');
