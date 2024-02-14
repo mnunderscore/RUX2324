@@ -77,14 +77,16 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        margin: 5px 0;
+        // TODO: les margins font sortir le post-it de l'écran
+        // margin: 5px 0;
     }
 
     .column {
         flex: 1;
-        margin: 15px;
-        margin-bottom: 5px;
-        margin-top: 5px;
+        // TODO: les margins font sortir le post-it de l'écran
+        // margin: 15px;
+        // margin-bottom: 5px;
+        // margin-top: 5px;
         padding: 10px;
         &:first-child { margin-left: 0; }
         &:last-child { margin-right: 0; }
@@ -97,9 +99,10 @@ body {
         left: 40px;
     }
 
-    section:first-child {
-        margin-bottom: 60px;
-    }
+    // TODO: les margins font sortir le post-it de l'écran
+    // section:first-child {
+    //     margin-bottom: 60px;
+    // }
 
     .post-it__sub-content{
         width: 33.3%;
