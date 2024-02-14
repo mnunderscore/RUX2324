@@ -95,7 +95,7 @@ body {
             width: 125px;
             cursor: pointer;
         }
-        */
+        
 
         .post-it__homeicon {
             // retirer pour ne pas animer l'icone
@@ -129,7 +129,7 @@ body {
                 top: 25px;
                 right: 25px;
             }
-        }
+        }*/
     }
 
 .post-it__nav {
@@ -198,6 +198,7 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 25px 25px 25px;
+    color: $selected-color;
 
     .footer__copyright {
         display: flex;
@@ -219,9 +220,17 @@ body {
             text-align: inherit;
             border-radius: 0;
             appearance: none;
+            cursor: pointer;
+            color: $slider-text-color;
+            transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
             &.--active {
-                color: #745518;
+                color: $selected-color;
+            }
+
+            &:hover{
+                color: $post-it-1;
+                transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
             }
         }
 
@@ -234,17 +243,27 @@ body {
             font: inherit;
             border-radius: 0;
             appearance: none;
+            transform: scale(1);
+            transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
             &:hover {
                 cursor: pointer;
                 -ms-transform: scale(1.3); /* IE 9 */
                 -webkit-transform: scale(1.3); /* Safari 3-8 */
                 transform: scale(1.3);
+                transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+
+                .footer__arrow{
+                    fill: $post-it-1;
+                    transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+                }
             }
 
-            svg{
+            .footer__arrow{
                 width:25px;
                 height:25px;
+                fill: $selected-color;
+                transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
             }
         }
     }
