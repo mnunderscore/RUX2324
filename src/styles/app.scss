@@ -90,6 +90,13 @@ body {
         &:last-child { margin-right: 0; }
     }
 
+    .logo-left {
+        position: absolute;
+        width: 100px;
+        top: 40px;
+        left: 40px;
+    }
+
     section:first-child {
         margin-bottom: 60px;
     }
