@@ -79,7 +79,7 @@ body {
 
     // TODO: supprimer code inutile si il n'est pas utilisé
 
-    /* TODO.post-it__corner {
+    /* .post-it__corner {
         height: 100px;
         width: 100px;
         content:"";
@@ -93,7 +93,6 @@ body {
         box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
 
         &:not(.--animatecorner):hover {
-            // TODO corriger le hover pour que l'animation ne se lance pas PENDANT une autre animation (wtf)
             height: 125px;
             width: 125px;
             cursor: pointer;

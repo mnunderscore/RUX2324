@@ -1,6 +1,4 @@
 "use strict";
-// Import jQuery
-import $ from 'jquery';
 
 // TODO: supprimer code inutile si il n'est pas utilisé
 
@@ -30,6 +28,18 @@ import $ from 'jquery';
 document.addEventListener("DOMContentLoaded", function () {
     const pages = document.querySelectorAll(".post-it__page");
     let currentPageIndex = 0;
+
+    document.addEventListener('keydown', keyboardListener);
+
+    function keyboardListener(event){
+        if(event.code == 'ArrowLeft'){
+            goToPreviousPage();
+        } else if(event.code == 'ArrowRight'){
+            goToNextPage();
+        }
+    }
+
+    // TODO: simplifier setActivePage
 
     function setActivePage(index) {
         switch (index) {
