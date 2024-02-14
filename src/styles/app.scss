@@ -1,7 +1,6 @@
 @import 'utils/variables';
 @import 'components/type';
 
-
 @-webkit-keyframes dash {
     to {
         stroke-dashoffset: 0;
@@ -77,9 +76,52 @@ body {
         width: 33.3%;
     }
 
+<<<<<<< Updated upstream
     // TODO: supprimer code inutile si il n'est pas utilisé
 
     /* .post-it__corner {
+=======
+    .columns {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .column {
+        flex: 1;
+        margin: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+        &:first-child { margin-left: 0; }
+        &:last-child { margin-right: 0; }
+    }
+
+    section:first-child {
+        margin-bottom: 60px;
+    }
+
+    .left-logo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 80px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-width: 0 7em 7em 0;
+        border-style: solid;
+        border-color: $colorDark;
+        opacity: 75%;
+    }
+    
+    /* TODO.post-it__corner {
+>>>>>>> Stashed changes
         height: 100px;
         width: 100px;
         content:"";
@@ -285,9 +327,26 @@ body {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
+    .columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
 
 }
 
