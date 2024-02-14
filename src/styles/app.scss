@@ -222,7 +222,8 @@ body {
             appearance: none;
             cursor: pointer;
             color: $slider-text-color;
-            transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+            transform: scale(1);
+            transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
             &.--active {
                 color: $selected-color;
@@ -230,14 +231,10 @@ body {
 
             &:hover{
                 color: $post-it-1;
-                transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-            }
-
-            &:hover {
-                cursor: pointer;
                 -ms-transform: scale(1.1); /* IE 9 */
                 -webkit-transform: scale(1.1); /* Safari 3-8 */
-                transform: scale(1.1); 
+                transform: scale(1.1);
+                transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
             }
         }
 
