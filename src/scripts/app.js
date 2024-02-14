@@ -24,7 +24,7 @@ import $ from 'jquery';
 //     cornerElement.addEventListener('click', toggleVisibility);
 // });
 
-// TODO intégrer slider
+// slider
 document.addEventListener("DOMContentLoaded", function () {
     const pages = document.querySelectorAll(".post-it__page");
     let currentPageIndex = 0;
