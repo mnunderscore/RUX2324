@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 
+
 @-webkit-keyframes dash {
     to {
         stroke-dashoffset: 0;
@@ -301,26 +302,9 @@ body {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
-    .columns .column {
-		flex-basis: 100%;
-		margin: 0 0 5px 0;
-	}
-
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
-    .columns .column {
-		margin-bottom: 5px;
-    flex-basis: 40%;
-		&:nth-last-child(2) {
-			margin-right: 0;
-		}
-		&:last-child {
-			flex-basis: 100%;
-			margin: 0;
-		}
-	}
 
 }
 
