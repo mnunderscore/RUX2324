@@ -39,46 +39,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // TODO: simplifier setActivePage
+    // TODO: Corriger scroll sur PC portable, un "gros scroll" fait défiler plusieurs pages au lieu d'une seule
+
+    let lastScrollTime = 0;
+    let isScrolling = false;
+    const scrollDelay = 1000; // delay in milliseconds
+
+    document.addEventListener('wheel', scrollListener);
+
+    function scrollListener(event){
+        const currentTime = new Date().getTime();
+
+        if(!isScrolling && currentTime - lastScrollTime > scrollDelay){
+            isScrolling = true;
+            if(event.deltaY < 0){
+                goToPreviousPage();
+            } else if(event.deltaY > 0){
+                goToNextPage();
+            }
+            lastScrollTime = currentTime;
+            setTimeout(() => { isScrolling = false; }, scrollDelay);
+        }
+    }
 
     function setActivePage(index) {
-        switch (index) {
-            case 0:
-                idee.classList.add("--active");
-                dispositif.classList.remove("--active");
-                avantages.classList.remove("--active");
-                projets.classList.remove("--active");
-                produit.classList.remove("--active");
-                break;
-            case 1:
-                idee.classList.remove("--active");
-                dispositif.classList.add("--active");
-                avantages.classList.remove("--active");
-                projets.classList.remove("--active");
-                produit.classList.remove("--active");
-                break;
-            case 2:
-                idee.classList.remove("--active");
-                dispositif.classList.remove("--active");
-                avantages.classList.add("--active");
-                projets.classList.remove("--active");
-                produit.classList.remove("--active");
-                break;
-            case 3:
-                idee.classList.remove("--active");
-                dispositif.classList.remove("--active");
-                avantages.classList.remove("--active");
-                projets.classList.add("--active");
-                produit.classList.remove("--active");
-                break;
-            case 4:
-                idee.classList.remove("--active");
-                dispositif.classList.remove("--active");
-                avantages.classList.remove("--active");
-                projets.classList.remove("--active");
-                produit.classList.add("--active");
-                break;
-        }
+        const elements = [idee, dispositif, avantages, projets, produit];
+
+        elements.forEach((element, i) => {
+            if (i === index) {
+                element.classList.add("--active");
+            } else {
+                element.classList.remove("--active");
+            }
+        });
     }
 
     function showPage(pageIndex) {
@@ -117,29 +110,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nextBtn.addEventListener("click", goToNextPage);
     prevBtn.addEventListener("click", goToPreviousPage);
-    idee.addEventListener("click", function () {
-        currentPageIndex = 0;
+    idee.addEventListener("click", () => setPage(0));
+    dispositif.addEventListener("click", () => setPage(1));
+    avantages.addEventListener("click", () => setPage(2));
+    projets.addEventListener("click", () => setPage(3));
+    produit.addEventListener("click", () => setPage(4));
+
+    function setPage(index) {
+        currentPageIndex = index;
         showPage(currentPageIndex);
         setActivePage(currentPageIndex);
-    });
-    dispositif.addEventListener("click", function () {
-        currentPageIndex = 1;
-        showPage(currentPageIndex);
-        setActivePage(currentPageIndex);
-    });
-    avantages.addEventListener("click", function () {
-        currentPageIndex = 2;
-        showPage(currentPageIndex);
-        setActivePage(currentPageIndex);
-    });
-    projets.addEventListener("click", function () {
-        currentPageIndex = 3;
-        showPage(currentPageIndex);
-        setActivePage(currentPageIndex);
-    });
-    produit.addEventListener("click", function () {
-        currentPageIndex = 4;
-        showPage(currentPageIndex);
-        setActivePage(currentPageIndex);
-    });
+    }
 });
