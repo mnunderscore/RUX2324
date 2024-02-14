@@ -71,57 +71,31 @@ body {
             width: 25%;
         }
     }
-
-    .post-it__sub-content{
-        width: 33.3%;
-    }
-
-<<<<<<< Updated upstream
-    // TODO: supprimer code inutile si il n'est pas utilisé
-
-    /* .post-it__corner {
-=======
+    
     .columns {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         margin: 5px 0;
     }
-
+    
     .column {
         flex: 1;
-        margin: 15px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        border: 1px solid gray;
+        margin: 2px;
         padding: 10px;
         &:first-child { margin-left: 0; }
         &:last-child { margin-right: 0; }
-    }
-
-    section:first-child {
-        margin-bottom: 60px;
-    }
-
-    .left-logo {
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        width: 80px;
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        border-width: 0 7em 7em 0;
-        border-style: solid;
-        border-color: $colorDark;
-        opacity: 75%;
+        
     }
     
-    /* TODO.post-it__corner {
->>>>>>> Stashed changes
+    .post-it__sub-content{
+        width: 33.3%;
+    }
+
+    // TODO: supprimer code inutile si il n'est pas utilisé
+
+    /* .post-it__corner {
         height: 100px;
         width: 100px;
         content:"";
