@@ -82,8 +82,9 @@ body {
     
     .column {
         flex: 1;
-        border: 1px solid gray;
-        margin: 2px;
+        margin: 15px;
+        margin-bottom: 5px;
+        margin-top: 5px;
         padding: 10px;
         &:first-child { margin-left: 0; }
         &:last-child { margin-right: 0; }
