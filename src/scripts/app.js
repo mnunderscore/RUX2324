@@ -26,3 +26,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO intégrer slider
+document.addEventListener("DOMContentLoaded", function () {
+    const pages = document.querySelectorAll(".page");
+    let currentPageIndex = 0;
+
+    function showPage(pageIndex) {
+        pages.forEach((page, index) => {
+            if (index === pageIndex) {
+                page.classList.add("active");
+            } else {
+                page.classList.remove("active");
+            }
+        });
+    }
+
+    function goToNextPage() {
+        if (currentPageIndex < pages.length - 1) {
+            currentPageIndex++;
+            showPage(currentPageIndex);
+        }
+    }
+
+    function goToPreviousPage() {
+        if (currentPageIndex > 0) {
+            currentPageIndex--;
+            showPage(currentPageIndex);
+        }
+    }
+
+    const nextBtn = document.querySelector(".nextBtn");
+    const prevBtn = document.querySelector(".prevBtn");
+
+    nextBtn.addEventListener("click", goToNextPage);
+    prevBtn.addEventListener("click", goToPreviousPage);
+});

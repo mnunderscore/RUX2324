@@ -33,6 +33,14 @@ body {
 
 }
 
+.page {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
 .post-it__paper {
     margin:25px;
     position: relative;
