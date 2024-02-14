@@ -33,13 +33,21 @@ body {
 
 }
 
+<<<<<<< Updated upstream
 .post-it__page {
+=======
+/*Slider - Option*/
+
+.page {
+>>>>>>> Stashed changes
     display: none;
 }
 
 .--active {
     display: block;
 }
+
+/*Slider*/
 
 .post-it__paper {
     margin:25px;
@@ -73,7 +81,8 @@ body {
         width: 33.3%;
     }
 
-    .post-it__corner {
+    
+    /* TODO.post-it__corner {
         height: 100px;
         width: 100px;
         content:"";
@@ -92,6 +101,7 @@ body {
             width: 125px;
             cursor: pointer;
         }
+        */
 
         .post-it__homeicon {
             // retirer pour ne pas animer l'icone
@@ -127,7 +137,6 @@ body {
             }
         }
     }
-}
 
 .post-it__nav {
     padding:0;
