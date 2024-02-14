@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // TODO intégrer slider
 document.addEventListener("DOMContentLoaded", function () {
-    const pages = document.querySelectorAll(".page");
+    const pages = document.querySelectorAll(".post-it__page");
     let currentPageIndex = 0;
 
     function showPage(pageIndex) {
         pages.forEach((page, index) => {
             if (index === pageIndex) {
-                page.classList.add("active");
+                page.classList.add("--active");
             } else {
-                page.classList.remove("active");
+                page.classList.remove("--active");
             }
         });
     }
