@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    const nextBtn = document.querySelector(".nextBtn");
-    const prevBtn = document.querySelector(".prevBtn");
+    const nextBtn = document.querySelector(".footer__next-btn");
+    const prevBtn = document.querySelector(".footer__prev-btn");
 
     nextBtn.addEventListener("click", goToNextPage);
     prevBtn.addEventListener("click", goToPreviousPage);
