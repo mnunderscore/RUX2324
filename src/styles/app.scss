@@ -99,6 +99,31 @@ body {
         left: 40px;
     }
 
+    //Placement Images doodles
+
+    .pig {
+        position: relative;
+        width: 6em;
+        margin-top: 100px;
+        margin-left: 260px;
+    }
+
+    .sun {
+        position: relative;
+        width: 4em;
+        margin-bottom: 160px;
+        margin-left: 160px;
+    }
+
+    .prototype {
+        display: flex;
+        justify-content: center;
+    }
+
+    .prototype__image {
+        width: 15em;
+    }
+
     // TODO: les margins font sortir le post-it de l'écran
     // section:first-child {
     //     margin-bottom: 60px;
