@@ -1,29 +1,5 @@
 "use strict";
 
-// TODO: supprimer code inutile si il n'est pas utilisé
-
-// function animateCorner() {
-//     const cornerElement = document.querySelector('.post-it__corner');
-//     cornerElement.classList.toggle('--animatecorner');
-// }
-
-// function toggleVisibility() {
-//     const navElement = document.querySelector('.post-it__nav');
-//     navElement.classList.toggle('--toggleVisibility');
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cornerElement = document.querySelector('.post-it__corner');
-//     cornerElement.addEventListener('click', animateCorner);
-//     cornerElement.addEventListener('click', toggleVisibility);
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cornerElement = document.querySelector('.close');
-//     cornerElement.addEventListener('click', animateCorner);
-//     cornerElement.addEventListener('click', toggleVisibility);
-// });
-
 // slider
 document.addEventListener("DOMContentLoaded", function () {
     const pages = document.querySelectorAll(".post-it__page");
@@ -67,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         elements.forEach((element, i) => {
             if (i === index) {
-                element.classList.add("--active");
+                element.classList.add("footer__slider--active");
             } else {
-                element.classList.remove("--active");
+                element.classList.remove("footer__slider--active");
             }
         });
     }
@@ -77,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function showPage(pageIndex) {
         pages.forEach((page, index) => {
             if (index === pageIndex) {
-                page.classList.add("--active");
+                page.classList.add("post-it__page--active");
             } else {
-                page.classList.remove("--active");
+                page.classList.remove("post-it__page--active");
             }
         });
     }
