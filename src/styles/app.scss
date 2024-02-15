@@ -47,6 +47,21 @@ body {
         box-sizing: border-box;         /* Opera/IE 8+ */
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 
+        // test
+        // #{ $self }__corner{
+        //     height: 100px;
+        //     width: 100px;
+        //     content:"";
+        //     position: absolute;
+        //     left: 0px;
+        //     bottom: 0px;
+        //     background-color: $background-color;
+        //     background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
+        //     transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+        //     z-index: 1;
+        //     box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
+        // }
+
         #{ $self }__content{
             display:flex;
             justify-content: space-between;
@@ -90,6 +105,7 @@ body {
                             position: absolute;
                             width: 6em;
                             right: 250px;
+                            fill: $doodle-color;
                         }
 
                         #{ $self }__sun {
@@ -97,6 +113,7 @@ body {
                             width: 4em;
                             right: 50px;
                             bottom:150px;
+                            fill: $doodle-color;
                         }
 
                         #{ $self }__small {
@@ -163,7 +180,7 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 25px 25px 25px;
-    color: $selected-color;
+    color: $accent-color;
 
     #{ $self }__copyright {
         display: flex;
@@ -191,7 +208,7 @@ body {
             transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
             &--active {
-                color: $selected-color;
+                color: $accent-color;
                 transform: scale(1.1);
                 transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
             }
@@ -233,7 +250,7 @@ body {
             #{ $self }__arrow{
                 width:25px;
                 height:25px;
-                fill: $selected-color;
+                fill: $accent-color;
                 transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
             }
         }
