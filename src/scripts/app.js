@@ -1,29 +1,5 @@
 "use strict";
 
-// TODO: supprimer code inutile si il n'est pas utilisé
-
-// function animateCorner() {
-//     const cornerElement = document.querySelector('.post-it__corner');
-//     cornerElement.classList.toggle('--animatecorner');
-// }
-
-// function toggleVisibility() {
-//     const navElement = document.querySelector('.post-it__nav');
-//     navElement.classList.toggle('--toggleVisibility');
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cornerElement = document.querySelector('.post-it__corner');
-//     cornerElement.addEventListener('click', animateCorner);
-//     cornerElement.addEventListener('click', toggleVisibility);
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cornerElement = document.querySelector('.close');
-//     cornerElement.addEventListener('click', animateCorner);
-//     cornerElement.addEventListener('click', toggleVisibility);
-// });
-
 // slider
 document.addEventListener("DOMContentLoaded", function () {
     const pages = document.querySelectorAll(".post-it__page");
