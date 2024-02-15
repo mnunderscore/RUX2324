@@ -147,7 +147,7 @@ $(document).keydown(function(e) {
     e.preventDefault();
 });
   
-$('#carousel div').click(function() {
+$('#post-it__carousel div').click(function() {
     moveToSelected($(this));
 });
   
