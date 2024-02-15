@@ -13,7 +13,13 @@
     }
 }
 
-html, body{
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+
+html, body{ 
     margin:0;
     padding:0;
     height:100%;
@@ -126,6 +132,7 @@ body {
                             fill: $doodle-color;
                         }
 
+
                         #{ $self }__small {
                             padding: 25px;
                             box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
@@ -155,12 +162,33 @@ body {
                         #{ $self }__prototype-img {
                             width: 15em;
                         }
+
+                        
                     }
                 }
             }
         }
 
-
+        .gallery {
+            background: #EEE;
+          
+            .gallery-cell {
+              width: 66%;
+              height: 200px;
+              margin-right: 10px;
+              background: #8C8;
+              counter-increment: gallery-cell;
+          
+              &:before {
+                display: block;
+                text-align: center;
+                content: counter(gallery-cell);
+                line-height: 200px;
+                font-size: 80px;
+                color: white;
+              }
+            }
+          }
 
 
         #{ $self }__small-logo {
