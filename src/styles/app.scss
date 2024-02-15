@@ -6,12 +6,12 @@
     to {
         stroke-dashoffset: 0;
     }
-    }
+}
     @keyframes dash {
     to {
         stroke-dashoffset: 0;
     }
-    }
+}
 
 html, body{
     margin:0;
@@ -25,12 +25,122 @@ body {
 }
 
 .post-it{
+    $self: &;
     display:flex;
     height:100%;
     width:100%;
     flex-direction: column;
     justify-content: flex-end;
 
+    #{ $self }__paper {
+        margin:25px;
+        position: relative;
+        padding: 20px 120px 20px 120px;
+        background-color: $postit-1;
+        flex-grow: 1;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+
+        #{ $self }__content{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #{ $self }__sub-content{
+                width: 66.6%;
+            }
+
+            #{ $self }__logo {
+                width: 25%;
+            }
+        }
+
+        #{ $self }__container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            // TODO: les margins font sortir le post-it de l'écran
+            // margin: 5px 0;
+
+            #{ $self }__column {
+                flex: 1;
+                // TODO: les margins font sortir le post-it de l'écran
+                // margin: 15px;
+                // margin-bottom: 5px;
+                // margin-top: 5px;
+                padding: 10px;
+                &:first-child { margin-left: 0; }
+                &:last-child { margin-right: 0; }
+
+                //Placement Images doodles
+
+                #{ $self }__pig {
+                    position: absolute;
+                    width: 6em;
+                    right: 250px;
+                }
+
+                #{ $self }__sun {
+                    position: absolute;
+                    width: 4em;
+                    right: 50px;
+                    bottom:150px;
+                }
+
+                #{ $self }__small {
+                    padding: 25px;
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+
+                    &--first {
+                        // width:100%;
+                        background-color: $small-postit-1;
+                    }
+
+                    &--second {
+                        // width:80%;
+                        background-color: $small-postit-2;
+                    }
+
+                    &--third {
+                        // width:70%;
+                        margin-top: 25px;
+                        background-color: $small-postit-3;
+                    }
+                }
+
+                #{ $self }__prototype {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #{ $self }__prototype-img {
+                    width: 15em;
+                }
+            }
+        }
+
+
+        #{ $self }__small-logo {
+            position: absolute;
+            width: 80px;
+            top: 40px;
+            left: 40px;
+        }
+
+        // TODO: les margins font sortir le post-it de l'écran
+        // section:first-child {
+        //     margin-bottom: 60px;
+        // }
+
+        #{ $self }__sub-content{
+            width: 33.3%;
+        }
+    }
 }
 
 // TODO: slider anim
@@ -43,229 +153,68 @@ body {
     display: block;
 }
 
-/*Slider*/
+// TODO: supprimer code inutile si il n'est pas utilisé
 
-.post-it__paper {
-    margin:25px;
-    position: relative;
-    padding: 20px 120px 20px 120px;
-    background-color: $post-it-1;
-    flex-grow: 1;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+// .post-it__nav {
+//     padding:0;
+//     margin:0;
+//     width:100%;
+//     position: absolute;
+//     gap: 150px;
+//     z-index:2;
+//     flex-direction: column;
+//     align-items: center;
+//     height:0;
+//     opacity:0;
+//     overflow:hidden;
+//     transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
-    .post-it__content{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+//     .presentation {
+//         display: flex;
+//     }
 
-        .post-it__sub-content{
-            width: 66.6%;
-        }
+//     .presentation__section {
+//         display: flex;
+//         justify-content: space-between;
+//     }
 
-        .post-it__logo {
-            width: 25%;
-        }
-    }
+//     .post-it__navlinks {
+//         display:flex;
+//         z-index:2;
+//         flex-direction: column;
+//         align-items: center;
 
-    .columns {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        // TODO: les margins font sortir le post-it de l'écran
-        // margin: 5px 0;
-    }
+//         a{
+//             margin: 10px 0;
+//             font-size: 1.802rem;
+//             text-decoration: none;
+//             color: $text-color;
+//             transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+//         }
 
-    .column {
-        flex: 1;
-        // TODO: les margins font sortir le post-it de l'écran
-        // margin: 15px;
-        // margin-bottom: 5px;
-        // margin-top: 5px;
-        padding: 10px;
-        &:first-child { margin-left: 0; }
-        &:last-child { margin-right: 0; }
-    }
+//         a:hover{
+//             color: $postit-1;
+//         }
+//     }
 
-    .post-it_1 {
-        padding: 25px;
-        background-color: #AAEDFC;
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
-    }
-    .post-it_2 {
-        padding: 25px;
-        background-color: #CDFFC0;
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
-    }
-    .post-it_3 {
-        margin-top: 25px;
-        padding: 25px;
-        background-color: #FDB9B9;
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
-    }
+//     &.--toggleVisibility {
+//         display: flex;
+//         justify-content: center;
+//         height: 100%;
+//         opacity: 1;
+//         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
-    .logo-left {
-        position: absolute;
-        width: 80px;
-        top: 40px;
-        left: 40px;
-    }
-
-    //Placement Images doodles
-
-    .pig {
-        position: relative;
-        width: 6em;
-        margin-top: 100px;
-        margin-left: 260px;
-    }
-
-    .sun {
-        position: relative;
-        width: 4em;
-        margin-bottom: 160px;
-        margin-left: 160px;
-    }
-
-    .prototype {
-        display: flex;
-        justify-content: center;
-    }
-
-    .prototype__image {
-        width: 15em;
-    }
-
-    // TODO: les margins font sortir le post-it de l'écran
-    // section:first-child {
-    //     margin-bottom: 60px;
-    // }
-
-    .post-it__sub-content{
-        width: 33.3%;
-    }
-
-    // TODO: supprimer code inutile si il n'est pas utilisé
-
-    /* .post-it__corner {
-        height: 100px;
-        width: 100px;
-        content:"";
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        background-color: $background-color;
-        background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
-        transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-        z-index: 1;
-        box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
-
-        &:not(.--animatecorner):hover {
-            height: 125px;
-            width: 125px;
-            cursor: pointer;
-        }
-
-
-        .post-it__homeicon {
-            // retirer pour ne pas animer l'icone
-            fill: none;
-            stroke: $text-color;
-            stroke-width: 5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-dasharray: 1700;
-            stroke-dashoffset: 1700;
-            -webkit-animation: dash 10s linear forwards;
-            animation: dash 10s linear forwards;
-            //
-            transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            height: 35px;
-            width: 35px;
-        }
-
-        &.--animatecorner {
-            height: 100%;
-            width: 100%;
-            background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%);
-            box-shadow: 0 0 0 0 rgba(0,0,0,0);
-            transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-
-            .post-it__homeicon {
-                display:none;
-                top: 25px;
-                right: 25px;
-            }
-        }*/
-    }
-
-.post-it__nav {
-    padding:0;
-    margin:0;
-    width:100%;
-    position: absolute;
-    gap: 150px;
-    z-index:2;
-    flex-direction: column;
-    align-items: center;
-    height:0;
-    opacity:0;
-    overflow:hidden;
-    transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-
-    .presentation {
-        display: flex;
-    }
-
-    .presentation__section {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .post-it__navlinks {
-        display:flex;
-        z-index:2;
-        flex-direction: column;
-        align-items: center;
-
-        a{
-            margin: 10px 0;
-            font-size: 1.802rem;
-            text-decoration: none;
-            color: $text-color;
-            transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-        }
-
-        a:hover{
-            color: $post-it-1;
-        }
-    }
-
-    &.--toggleVisibility {
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        opacity: 1;
-        transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-
-        .close {
-            cursor: pointer;
-            position: fixed;
-            top: 50px;
-            right: 60px;
-        }
-    }
-}
+//         .close {
+//             cursor: pointer;
+//             position: fixed;
+//             top: 50px;
+//             right: 60px;
+//         }
+//     }
+// }
 
 .footer {
+    $self: &;
     z-index: 2;
     display:flex;
     flex-direction: column;
@@ -275,19 +224,19 @@ body {
     margin: 0 25px 25px 25px;
     color: $selected-color;
 
-    .footer__copyright {
+    #{ $self }__copyright {
         display: flex;
         justify-content: center;
         width:100%;
         margin: 20px 0 0;
     }
 
-    .footer__nav {
+    #{ $self }__nav {
         display: flex;
         justify-content: space-around;
         width:100%;
 
-        .footer__slider {
+        #{ $self }__slider {
             background-color: transparent;
             border: none;
             margin: 0;
@@ -307,7 +256,7 @@ body {
             }
 
             &:hover{
-                color: $post-it-1;
+                color: $postit-1;
                 -ms-transform: scale(1.1); /* IE 9 */
                 -webkit-transform: scale(1.1); /* Safari 3-8 */
                 transform: scale(1.1);
@@ -315,7 +264,7 @@ body {
             }
         }
 
-        .footer__prev-btn, .footer__next-btn {
+        #{ $self }__prev-btn, #{ $self }__next-btn {
             background-color: transparent;
             border: none;
             margin: 0;
@@ -335,12 +284,12 @@ body {
                 transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
                 .footer__arrow{
-                    fill: $post-it-1;
+                    fill: $postit-1;
                     transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
                 }
             }
 
-            .footer__arrow{
+            #{ $self }__arrow{
                 width:25px;
                 height:25px;
                 fill: $selected-color;
@@ -353,7 +302,7 @@ body {
 // TODO: Media queries
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .columns .column {
+    .post-it__container .post-it__column {
 		margin-bottom: 5px;
     flex-basis: 40%;
 		&:nth-last-child(2) {
@@ -367,7 +316,7 @@ body {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .columns .column {
+    .post-it__container .post-it__column {
 		flex-basis: 100%;
 		margin: 0 0 5px 0;
 	}
