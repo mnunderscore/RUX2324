@@ -147,66 +147,6 @@ body {
 
 // TODO: slider anim
 
-// TODO: supprimer code inutile si il n'est pas utilisé
-
-// .post-it__nav {
-//     padding:0;
-//     margin:0;
-//     width:100%;
-//     position: absolute;
-//     gap: 150px;
-//     z-index:2;
-//     flex-direction: column;
-//     align-items: center;
-//     height:0;
-//     opacity:0;
-//     overflow:hidden;
-//     transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-
-//     .presentation {
-//         display: flex;
-//     }
-
-//     .presentation__section {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     .post-it__navlinks {
-//         display:flex;
-//         z-index:2;
-//         flex-direction: column;
-//         align-items: center;
-
-//         a{
-//             margin: 10px 0;
-//             font-size: 1.802rem;
-//             text-decoration: none;
-//             color: $text-color;
-//             transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-//         }
-
-//         a:hover{
-//             color: $postit-1;
-//         }
-//     }
-
-//     &.--toggleVisibility {
-//         display: flex;
-//         justify-content: center;
-//         height: 100%;
-//         opacity: 1;
-//         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s, height cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-
-//         .close {
-//             cursor: pointer;
-//             position: fixed;
-//             top: 50px;
-//             right: 60px;
-//         }
-//     }
-// }
-
 .footer {
     $self: &;
     z-index: 2;
