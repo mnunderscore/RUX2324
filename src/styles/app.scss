@@ -83,6 +83,7 @@ body {
                 }
 
                 #{ $self }__container {
+                    position: relative;
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: center;
@@ -113,6 +114,15 @@ body {
                             width: 4em;
                             right: 50px;
                             bottom:150px;
+                            fill: $doodle-color;
+                        }
+
+                        #{ $self }__snail {
+                            position: absolute;
+                            top: -40px;
+                            right: 40px;
+                            z-index: 999;
+                            width: 4em;
                             fill: $doodle-color;
                         }
 
