@@ -224,7 +224,7 @@ body {
                 transform: scale(1.3);
                 transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
-                .footer__arrow{
+                #{ $self }__arrow{
                     fill: $postit-1;
                     transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
                 }
