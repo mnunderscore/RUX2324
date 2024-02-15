@@ -51,78 +51,80 @@ body {
             justify-content: space-between;
             align-items: center;
 
-            #{ $self }__sub-content{
-                width: 66.6%;
-            }
+            #{ $self }__page {
+                display: none;
 
-            #{ $self }__logo {
-                width: 25%;
-            }
-        }
-
-        #{ $self }__container {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            // TODO: les margins font sortir le post-it de l'écran
-            // margin: 5px 0;
-
-            #{ $self }__column {
-                flex: 1;
-                // TODO: les margins font sortir le post-it de l'écran
-                // margin: 15px;
-                // margin-bottom: 5px;
-                // margin-top: 5px;
-                padding: 10px;
-                &:first-child { margin-left: 0; }
-                &:last-child { margin-right: 0; }
-
-                //Placement Images doodles
-
-                #{ $self }__pig {
-                    position: absolute;
-                    width: 6em;
-                    right: 250px;
+                &--active {
+                    display: block;
                 }
 
-                #{ $self }__sun {
-                    position: absolute;
-                    width: 4em;
-                    right: 50px;
-                    bottom:150px;
-                }
-
-                #{ $self }__small {
-                    padding: 25px;
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-
-                    &--first {
-                        // width:100%;
-                        background-color: $small-postit-1;
-                    }
-
-                    &--second {
-                        // width:80%;
-                        background-color: $small-postit-2;
-                    }
-
-                    &--third {
-                        // width:70%;
-                        margin-top: 25px;
-                        background-color: $small-postit-3;
-                    }
-                }
-
-                #{ $self }__prototype {
+                #{ $self }__container {
                     display: flex;
+                    flex-flow: row wrap;
                     justify-content: center;
-                }
+                    // TODO: les margins font sortir le post-it de l'écran
+                    // margin: 5px 0;
 
-                #{ $self }__prototype-img {
-                    width: 15em;
+                    #{ $self }__column {
+                        flex: 1;
+                        // TODO: les margins font sortir le post-it de l'écran
+                        // margin: 15px;
+                        // margin-bottom: 5px;
+                        // margin-top: 5px;
+                        padding: 10px;
+                        &:first-child { margin-left: 0; }
+                        &:last-child { margin-right: 0; }
+
+                        //Placement Images doodles
+
+                        #{ $self }__pig {
+                            position: absolute;
+                            width: 6em;
+                            right: 250px;
+                        }
+
+                        #{ $self }__sun {
+                            position: absolute;
+                            width: 4em;
+                            right: 50px;
+                            bottom:150px;
+                        }
+
+                        #{ $self }__small {
+                            padding: 25px;
+                            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+
+                            &--first {
+                                // width:100%;
+                                background-color: $small-postit-1;
+                            }
+
+                            &--second {
+                                // width:80%;
+                                background-color: $small-postit-2;
+                            }
+
+                            &--third {
+                                // width:70%;
+                                margin-top: 25px;
+                                background-color: $small-postit-3;
+                            }
+                        }
+
+                        #{ $self }__prototype {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        #{ $self }__prototype-img {
+                            width: 15em;
+                        }
+                    }
                 }
             }
         }
+
+
 
 
         #{ $self }__small-logo {
@@ -144,14 +146,6 @@ body {
 }
 
 // TODO: slider anim
-
-.post-it__page {
-    display: none;
-}
-
-.--active {
-    display: block;
-}
 
 // TODO: supprimer code inutile si il n'est pas utilisé
 
@@ -249,7 +243,7 @@ body {
             transform: scale(1);
             transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
-            &.--active {
+            &--active {
                 color: $selected-color;
                 transform: scale(1.1);
                 transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
