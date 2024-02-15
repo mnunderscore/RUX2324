@@ -67,6 +67,16 @@ body {
             justify-content: space-between;
             align-items: center;
 
+            #page2{
+                #{ $self }__container{
+                    #{ $self }__column:last-child{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
             #{ $self }__page {
                 opacity:0;
                 visibility: hidden;

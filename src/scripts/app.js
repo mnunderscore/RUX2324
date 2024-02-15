@@ -15,14 +15,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    document.addEventListener('wheel', scrollListener);
+    let isScrolling = false;
+    const deltaThreshold = 50; // Adjust this value as needed
+
+    document.addEventListener('wheel', function(event) {
+        if (!isScrolling && (Math.abs(event.deltaY) >= deltaThreshold || Math.abs(event.deltaX) >= deltaThreshold)) {
+            isScrolling = true;
+            scrollListener(event);
+        }
+    });
 
     function scrollListener(event){
-        if(event.deltaY < 0){
-            goToPreviousPage();
-        } else if(event.deltaY > 0){
-            goToNextPage();
+        if(Math.abs(event.deltaY) >= deltaThreshold){
+            if(event.deltaY < 0){
+                goToPreviousPage();
+            } else if(event.deltaY > 0){
+                goToNextPage();
+            }
+        } else if(Math.abs(event.deltaX) >= deltaThreshold){
+            if(event.deltaX < 0){
+                goToPreviousPage();
+            } else if(event.deltaX > 0){
+                goToNextPage();
+            }
         }
+        setTimeout(() => { isScrolling = false; }, 500);
     }
 
     function setActivePage(index) {
