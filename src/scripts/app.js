@@ -15,26 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // TODO: Corriger scroll sur PC portable, un "gros scroll" fait défiler plusieurs pages au lieu d'une seule
-
-    let lastScrollTime = 0;
-    let isScrolling = false;
-    const scrollDelay = 1000; // delay in milliseconds
-
     document.addEventListener('wheel', scrollListener);
 
     function scrollListener(event){
-        const currentTime = new Date().getTime();
-
-        if(!isScrolling && currentTime - lastScrollTime > scrollDelay){
-            isScrolling = true;
-            if(event.deltaY < 0){
-                goToPreviousPage();
-            } else if(event.deltaY > 0){
-                goToNextPage();
-            }
-            lastScrollTime = currentTime;
-            setTimeout(() => { isScrolling = false; }, scrollDelay);
+        if(event.deltaY < 0){
+            goToPreviousPage();
+        } else if(event.deltaY > 0){
+            goToNextPage();
         }
     }
 
