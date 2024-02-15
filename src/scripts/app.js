@@ -102,3 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setActivePage(currentPageIndex);
     }
 });
+
+//carousel
+
+
