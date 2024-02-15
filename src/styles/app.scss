@@ -1,5 +1,6 @@
 @import 'utils/variables';
 @import 'components/type';
+@import '@splidejs/splide/css';
 
 
 @-webkit-keyframes dash {
@@ -178,27 +179,6 @@ body {
                 }
             }
         }
-
-        .gallery {
-          
-            .gallery-cell {
-              width: 60%;
-              height: 400px;
-              margin-right: 10px;
-              background: $postit-2;
-              counter-increment: gallery-cell;
-          
-              &:before {
-                display: block;
-                text-align: center;
-                content: counter(gallery-cell);
-                line-height: 200px;
-                font-size: 80px;
-                color: white;
-              }
-            }
-          }
-
 
         #{ $self }__small-logo {
             position: absolute;
