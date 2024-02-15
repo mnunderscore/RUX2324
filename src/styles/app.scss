@@ -1,6 +1,5 @@
 @import 'utils/variables';
 @import 'components/type';
-@import '@splidejs/splide/css';
 
 
 @-webkit-keyframes dash {
@@ -173,7 +172,6 @@ body {
                         #{ $self }__prototype-img {
                             width: 15em;
                         }
-é
                     }
                 }
             }
