@@ -180,13 +180,12 @@ body {
         }
 
         .gallery {
-            background: #EEE;
           
             .gallery-cell {
-              width: 66%;
-              height: 200px;
+              width: 60%;
+              height: 400px;
               margin-right: 10px;
-              background: #8C8;
+              background: $postit-2;
               counter-increment: gallery-cell;
           
               &:before {
