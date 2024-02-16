@@ -12,12 +12,13 @@
   }
 }
 
-html, body{
-    margin:0;
-    padding:0;
-    height:100%;
-    width:100%;
-    overflow: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -83,30 +84,30 @@ body {
         width: 0;
         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
-                &--active {
-                    opacity:1;
-                    visibility:visible;
-                    height:100%;
-                    width:100%;
-                    transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-                }
+        &--active {
+          opacity: 1;
+          visibility: visible;
+          height: 100%;
+          width: 100%;
+          transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+        }
 
-                #{ $self }__rainbow {
-                  position: absolute;
-                  width: 6em;
-                  right: 70px;
-                  top: 50px;
-                  rotate: 35deg;
-                  fill: $doodle-color;
-              }
+        #{ $self }__rainbow {
+          position: absolute;
+          width: 6em;
+          right: 70px;
+          top: 50px;
+          rotate: 35deg;
+          fill: $doodle-color;
+        }
 
-              #{ $self }__pirate {
-                position: absolute;
-                bottom: 50px;
-                right: 80px;
-                width: 4em;
-                fill: $doodle-color;
-            }
+        #{ $self }__pirate {
+          position: absolute;
+          bottom: 50px;
+          right: 80px;
+          width: 4em;
+          fill: $doodle-color;
+        }
 
         #{ $self }__container {
           position: relative;
@@ -132,30 +133,30 @@ body {
 
             //Placement Images doodles
 
-                        #{ $self }__pig {
-                            position: absolute;
-                            width: 6em;
-                            right: 350px;
-                            bottom: -50px;
-                            fill: $doodle-color;
-                        }
+            #{ $self }__pig {
+              position: absolute;
+              width: 6em;
+              right: 350px;
+              bottom: -50px;
+              fill: $doodle-color;
+            }
 
-                        #{ $self }__sun {
-                            position: absolute;
-                            width: 4em;
-                            right: 150px;
-                            bottom:120px;
-                            fill: $doodle-color;
-                        }
+            #{ $self }__sun {
+              position: absolute;
+              width: 4em;
+              right: 150px;
+              bottom: 120px;
+              fill: $doodle-color;
+            }
 
-                        #{ $self }__snail {
-                            position: absolute;
-                            top: -40px;
-                            right: 40px;
-                            z-index: 999;
-                            width: 4em;
-                            fill: $doodle-color;
-                        }
+            #{ $self }__snail {
+              position: absolute;
+              top: -40px;
+              right: 40px;
+              z-index: 999;
+              width: 4em;
+              fill: $doodle-color;
+            }
 
             #{ $self }__small {
               padding: 25px;
@@ -405,7 +406,7 @@ body {
       overflow-y: scroll;
       overflow-x: hidden;
 
-      #{ $self }__content{
+      #{ $self }__content {
         height: 100%;
 
         #{ $self }__page #{ $self }__container #{ $self }__column {
@@ -422,15 +423,14 @@ body {
           #{ $self }__pig {
             width: 6em;
             right: 100px;
-            bottom:0px;
+            bottom: 0px;
           }
 
           #{ $self }__sun {
             width: 3em;
             right: 20px;
-            bottom:0;
+            bottom: 0;
           }
-
         }
       }
     }
@@ -447,7 +447,7 @@ body {
       overflow-y: scroll;
       overflow-x: hidden;
 
-      #{ $self }__content{
+      #{ $self }__content {
         height: 100%;
 
         #{ $self }__page #{ $self }__container #{ $self }__column {
@@ -464,15 +464,14 @@ body {
           #{ $self }__pig {
             width: 6em;
             right: 100px;
-            bottom:0px;
+            bottom: 0px;
           }
 
           #{ $self }__sun {
             width: 3em;
             right: 20px;
-            bottom:0;
+            bottom: 0;
           }
-
         }
       }
     }
@@ -489,7 +488,7 @@ body {
       overflow-y: scroll;
       overflow-x: hidden;
 
-      #{ $self }__content{
+      #{ $self }__content {
         height: 100%;
 
         #{ $self }__page #{ $self }__container #{ $self }__column {
@@ -506,15 +505,14 @@ body {
           #{ $self }__pig {
             width: 6em;
             right: 100px;
-            bottom:0px;
+            bottom: 0px;
           }
 
           #{ $self }__sun {
             width: 3em;
             right: 20px;
-            bottom:0;
+            bottom: 0;
           }
-
         }
       }
     }
