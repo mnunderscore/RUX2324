@@ -108,6 +108,31 @@ body {
           fill: $doodle-color;
         }
 
+        #{ $self }__flower {
+          position: absolute;
+          left: 50px;
+          width: 5em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+        #{ $self }__flower_1 {
+          position: absolute;
+          left: 200px;
+          width: 4em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+        #{ $self }__flower_2 {
+          position: absolute;
+          left: 350px;
+          width: 3em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+
         #{ $self }__container {
           position: relative;
           display: flex;
