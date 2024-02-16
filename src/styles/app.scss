@@ -222,6 +222,48 @@ body {
       }
     }
 
+    .post-it__buttons button {
+      margin-right: 40px;
+  }
+
+    #next {
+      background-color: transparent;
+      border: none;
+      text-align: inherit;
+      font: inherit;
+      appearance: none;
+      color: $accent-color;
+      
+      &:hover {
+        cursor: pointer;
+        color: $doodle-color;
+        -ms-transform: scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari 3-8 */
+        transform: scale(1.2);
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      }
+    }
+
+    #prev {
+      background-color: transparent;
+      border: none;
+      text-align: inherit;
+      font: inherit;
+      appearance: none;
+      color: $accent-color;
+
+      &:hover {
+        cursor: pointer;
+        color: $doodle-color;
+        -ms-transform: scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari 3-8 */
+        transform: scale(1.2);
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      }
+    }
+
     #post-it__carousel {
       position: relative;
       height: 400px;
@@ -305,6 +347,7 @@ body {
           img {
             width: 200px;
           }
+
         }
       }
     }
