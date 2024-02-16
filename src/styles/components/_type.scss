@@ -1,31 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Shantell+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Shantell+Sans&display=swap");
 
-body{
-    font-family: 'Playpen Sans', sans-serif;
-    font-size: $font-size;
-    font-weight: 500;
-    line-height: 1.6;
-    color: $text-color;
+body {
+  font-family: "Playpen Sans", sans-serif;
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: 1.6;
+  color: $text-color;
 }
 
-.post-it__title, .post-it__nav .post-it__navlinks a{
-    font-family: 'Shantell Sans', sans-serif;
-    font-size: 1.78em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+.post-it__title,
+.post-it__nav .post-it__navlinks a {
+  font-family: "Shantell Sans", sans-serif;
+  font-size: 1.78em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
-.post-it__nav .post-it__navlinks a{
-    font-weight: 800;
+.post-it__nav .post-it__navlinks a {
+  font-weight: 800;
 }
 
-.footer{
-    font-size: .75em;
-    font-weight: 400;
+.footer {
+  font-size: 0.75em;
+  font-weight: 400;
 }
 
-.footer__slider{
-    font-family: 'Shantell Sans', sans-serif;
-    font-size: $font-size;
-    font-weight: 800;
+.footer__slider {
+  font-family: "Shantell Sans", sans-serif;
+  font-size: $font-size;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: $mobile-font-size;
+  }
+  .footer__slider {
+    font-size: $mobile-font-size;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: $mobile-font-size;
+  }
+  .footer__slider {
+    font-size: $mobile-font-size;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1201px) {
 }

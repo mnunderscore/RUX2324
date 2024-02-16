@@ -1,16 +1,15 @@
-@import 'utils/variables';
-@import 'components/type';
-
+@import "utils/variables";
+@import "components/type";
 
 @-webkit-keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
-    @keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 html, body{
@@ -22,67 +21,67 @@ html, body{
 }
 
 body {
-    background: $background-color;
+  background: $background-color;
 }
 
-.post-it{
-    $self: &;
-    display:flex;
-    height:100%;
-    width:100%;
+.post-it {
+  $self: &;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  #{ $self }__paper {
+    margin: 25px;
+    position: relative;
+    padding: 20px 120px 20px 120px;
+    background-color: $postit-1;
+    flex-grow: 1;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 
-    #{ $self }__paper {
-        margin:25px;
-        position: relative;
-        padding: 20px 120px 20px 120px;
-        background-color: $postit-1;
-        flex-grow: 1;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        box-sizing: border-box;         /* Opera/IE 8+ */
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    // test
+    // #{ $self }__corner{
+    //     height: 100px;
+    //     width: 100px;
+    //     content:"";
+    //     position: absolute;
+    //     left: 0px;
+    //     bottom: 0px;
+    //     background-color: $background-color;
+    //     background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
+    //     transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+    //     z-index: 1;
+    //     box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
+    // }
 
-        // test
-        // #{ $self }__corner{
-        //     height: 100px;
-        //     width: 100px;
-        //     content:"";
-        //     position: absolute;
-        //     left: 0px;
-        //     bottom: 0px;
-        //     background-color: $background-color;
-        //     background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, #D8CFA1 50%);
-        //     transition: all cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-        //     z-index: 1;
-        //     box-shadow: 7px -7px 7px -5px rgba(0,0,0,0.3);
-        // }
+    #{ $self }__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-        #{ $self }__content{
-            display:flex;
-            justify-content: space-between;
+      #page2 {
+        #{ $self }__container {
+          #{ $self }__column:last-child {
+            display: flex;
+            justify-content: center;
             align-items: center;
+          }
+        }
+      }
 
-            #page2{
-                #{ $self }__container{
-                    #{ $self }__column:last-child{
-                        display:flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
-
-            #{ $self }__page {
-                opacity:0;
-                visibility: hidden;
-                height:0;
-                width:0;
-                transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+      #{ $self }__page {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
                 &--active {
                     opacity:1;
@@ -109,25 +108,29 @@ body {
                 fill: $doodle-color;
             }
 
-                #{ $self }__container {
-                    position: relative;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: center;
-                    // TODO: les margins font sortir le post-it de l'écran
-                    // margin: 5px 0;
+        #{ $self }__container {
+          position: relative;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          // TODO: les margins font sortir le post-it de l'écran
+          // margin: 5px 0;
 
-                    #{ $self }__column {
-                        flex: 1;
-                        // TODO: les margins font sortir le post-it de l'écran
-                        // margin: 15px;
-                        // margin-bottom: 5px;
-                        // margin-top: 5px;
-                        padding: 10px;
-                        &:first-child { margin-left: 0; }
-                        &:last-child { margin-right: 0; }
+          #{ $self }__column {
+            flex: 1;
+            // TODO: les margins font sortir le post-it de l'écran
+            // margin: 15px;
+            // margin-bottom: 5px;
+            // margin-top: 5px;
+            padding: 10px;
+            &:first-child {
+              margin-left: 0;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
 
-                        //Placement Images doodles
+            //Placement Images doodles
 
                         #{ $self }__pig {
                             position: absolute;
@@ -154,270 +157,369 @@ body {
                             fill: $doodle-color;
                         }
 
-                        #{ $self }__small {
-                            padding: 25px;
-                            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+            #{ $self }__small {
+              padding: 25px;
+              box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 
-                            &--first {
-                                // width:100%;
-                                background-color: $small-postit-1;
-                            }
+              &--first {
+                // width:100%;
+                background-color: $small-postit-1;
+              }
 
-                            &--second {
-                                // width:80%;
-                                background-color: $small-postit-2;
-                            }
+              &--second {
+                // width:80%;
+                background-color: $small-postit-2;
+              }
 
-                            &--third {
-                                // width:70%;
-                                margin-top: 25px;
-                                background-color: $small-postit-3;
-                            }
-                        }
-
-                        #{ $self }__prototype {
-                            display: flex;
-                            justify-content: center;
-                        }
-
-                        #{ $self }__prototype-img {
-                            width: 15em;
-                        }
-                    }
-                }
-            }
-        }
-        
-        #post-it__carousel {
-            position: relative;
-            height: 400px;
-            top: 50%;
-            transform: translateY(-50%);
-            overflow: hidden;
-          
-            div {
-              position: absolute;
-              transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-              opacity: 1;
-          
-              img {
-                width: 400px;
-                transition: width 1s;
-              }
-          
-              &.hideLeft {
-                left: 0%;
-                opacity: 0;
-                transform: translateY(50%) translateX(-50%);
-          
-                img {
-                  width: 200px;
-                }
-              }
-          
-              &.hideRight {
-                left: 100%;
-                opacity: 0;
-                transform: translateY(50%) translateX(-50%);
-          
-                img {
-                  width: 200px;
-                }
-              }
-          
-              &.prev {
-                z-index: 5;
-                left: 30%;
-                transform: translateY(50px) translateX(-50%);
-          
-                img {
-                  width: 300px;
-                }
-              }
-          
-              &.prevLeftSecond {
-                z-index: 4;
-                left: 15%;
-                transform: translateY(50%) translateX(-50%);
-                opacity: 0.7;
-          
-                img {
-                  width: 200px;
-                }
-              }
-          
-              &.selected {
-                z-index: 10;
-                left: 50%;
-                transform: translateY(0px) translateX(-50%);
-              }
-          
-              &.next {
-                z-index: 5;
-                left: 70%;
-                transform: translateY(50px) translateX(-50%);
-          
-                img {
-                  width: 300px;
-                }
-              }
-          
-              &.nextRightSecond {
-                z-index: 4;
-                left: 85%;
-                transform: translateY(50%) translateX(-50%);
-                opacity: 0.7;
-          
-                img {
-                  width: 200px;
-                }
+              &--third {
+                // width:70%;
+                margin-top: 25px;
+                background-color: $small-postit-3;
               }
             }
-          }
-          
-          .buttons {
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            padding-top: 60px;
-          }
-          
-          
-        #{ $self }__small-logo {
-            position: absolute;
-            width: 80px;
-            top: 40px;
-            left: 40px;
-        }
 
-        // TODO: les margins font sortir le post-it de l'écran
-        // section:first-child {
-        //     margin-bottom: 60px;
-        // }
+            #{ $self }__prototype {
+              display: flex;
+              justify-content: center;
+            }
 
-        #{ $self }__sub-content{
-            width: 33.3%;
+            #{ $self }__prototype-img {
+              width: 15em;
+            }
+          }
         }
+      }
     }
+
+    #post-it__carousel {
+      position: relative;
+      height: 400px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+        opacity: 1;
+
+        img {
+          width: 400px;
+          transition: width 1s;
+        }
+
+        &.hideLeft {
+          left: 0%;
+          opacity: 0;
+          transform: translateY(50%) translateX(-50%);
+
+          img {
+            width: 200px;
+          }
+        }
+
+        &.hideRight {
+          left: 100%;
+          opacity: 0;
+          transform: translateY(50%) translateX(-50%);
+
+          img {
+            width: 200px;
+          }
+        }
+
+        &.prev {
+          z-index: 5;
+          left: 30%;
+          transform: translateY(50px) translateX(-50%);
+
+          img {
+            width: 300px;
+          }
+        }
+
+        &.prevLeftSecond {
+          z-index: 4;
+          left: 15%;
+          transform: translateY(50%) translateX(-50%);
+          opacity: 0.7;
+
+          img {
+            width: 200px;
+          }
+        }
+
+        &.selected {
+          z-index: 10;
+          left: 50%;
+          transform: translateY(0px) translateX(-50%);
+        }
+
+        &.next {
+          z-index: 5;
+          left: 70%;
+          transform: translateY(50px) translateX(-50%);
+
+          img {
+            width: 300px;
+          }
+        }
+
+        &.nextRightSecond {
+          z-index: 4;
+          left: 85%;
+          transform: translateY(50%) translateX(-50%);
+          opacity: 0.7;
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 60px;
+    }
+
+    #{ $self }__small-logo {
+      position: absolute;
+      width: 80px;
+      top: 40px;
+      left: 40px;
+    }
+
+    // TODO: les margins font sortir le post-it de l'écran
+    // section:first-child {
+    //     margin-bottom: 60px;
+    // }
+
+    #{ $self }__sub-content {
+      width: 33.3%;
+    }
+  }
 }
 
 .footer {
-    $self: &;
-    z-index: 2;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin: 0 25px 25px 25px;
-    color: $accent-color;
+  $self: &;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 25px 25px 25px;
+  color: $accent-color;
 
-    #{ $self }__copyright {
-        display: flex;
-        justify-content: center;
-        width:100%;
-        margin: 20px 0 0;
+  #{ $self }__copyright {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0 0;
+  }
+
+  #{ $self }__nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    #{ $self }__slider {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      text-align: inherit;
+      border-radius: 0;
+      appearance: none;
+      cursor: pointer;
+      color: $slider-text-color;
+      transform: scale(1);
+      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+
+      &--active {
+        color: $accent-color;
+        transform: scale(1.1);
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      }
+
+      &:hover {
+        color: $postit-1;
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1);
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      }
     }
 
-    #{ $self }__nav {
-        display: flex;
-        justify-content: space-around;
-        width:100%;
+    #{ $self }__prev-btn,
+    #{ $self }__next-btn {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      text-align: inherit;
+      font: inherit;
+      border-radius: 0;
+      appearance: none;
+      transform: scale(1);
+      transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
-        #{ $self }__slider {
-            background-color: transparent;
-            border: none;
-            margin: 0;
-            padding: 0;
-            text-align: inherit;
-            border-radius: 0;
-            appearance: none;
-            cursor: pointer;
-            color: $slider-text-color;
-            transform: scale(1);
-            transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      &:hover {
+        cursor: pointer;
+        -ms-transform: scale(1.3); /* IE 9 */
+        -webkit-transform: scale(1.3); /* Safari 3-8 */
+        transform: scale(1.3);
+        transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
-            &--active {
-                color: $accent-color;
-                transform: scale(1.1);
-                transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-            }
-
-            &:hover{
-                color: $postit-1;
-                -ms-transform: scale(1.1); /* IE 9 */
-                -webkit-transform: scale(1.1); /* Safari 3-8 */
-                transform: scale(1.1);
-                transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s, transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-            }
+        #{ $self }__arrow {
+          fill: $postit-1;
+          transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
         }
+      }
 
-        #{ $self }__prev-btn, #{ $self }__next-btn {
-            background-color: transparent;
-            border: none;
-            margin: 0;
-            padding: 0;
-            text-align: inherit;
-            font: inherit;
-            border-radius: 0;
-            appearance: none;
-            transform: scale(1);
-            transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-
-            &:hover {
-                cursor: pointer;
-                -ms-transform: scale(1.3); /* IE 9 */
-                -webkit-transform: scale(1.3); /* Safari 3-8 */
-                transform: scale(1.3);
-                transition: transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-
-                #{ $self }__arrow{
-                    fill: $postit-1;
-                    transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-                }
-            }
-
-            #{ $self }__arrow{
-                width:25px;
-                height:25px;
-                fill: $accent-color;
-                transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
-            }
-        }
+      #{ $self }__arrow {
+        width: 25px;
+        height: 25px;
+        fill: $accent-color;
+        transition: fill cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+      }
     }
+  }
 }
 
 // TODO: Media queries
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .post-it__container .post-it__column {
-		margin-bottom: 5px;
-    flex-basis: 40%;
-		&:nth-last-child(2) {
-			margin-right: 0;
-		}
-		&:last-child {
-			flex-basis: 100%;
-			margin: 0;
-		}
-	}
+  .post-it {
+    $self: &;
+    flex-flow: column;
+
+    #{ $self }__paper {
+      padding: 20px 20px 20px 20px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      #{ $self }__content{
+        height: 100%;
+
+        #{ $self }__page #{ $self }__container #{ $self }__column {
+          margin-bottom: 5px;
+          flex-basis: 40%;
+          &:nth-last-child(2) {
+            margin-right: 0;
+          }
+          &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+          }
+
+          #{ $self }__pig {
+            width: 6em;
+            right: 100px;
+            bottom:0px;
+          }
+
+          #{ $self }__sun {
+            width: 3em;
+            right: 20px;
+            bottom:0;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .post-it__container .post-it__column {
-		flex-basis: 100%;
-		margin: 0 0 5px 0;
-	}
+  .post-it {
+    $self: &;
+    flex-flow: column;
+
+    #{ $self }__paper {
+      padding: 20px 20px 20px 20px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      #{ $self }__content{
+        height: 100%;
+
+        #{ $self }__page #{ $self }__container #{ $self }__column {
+          margin-bottom: 5px;
+          flex-basis: 40%;
+          &:nth-last-child(2) {
+            margin-right: 0;
+          }
+          &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+          }
+
+          #{ $self }__pig {
+            width: 6em;
+            right: 100px;
+            bottom:0px;
+          }
+
+          #{ $self }__sun {
+            width: 3em;
+            right: 20px;
+            bottom:0;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .post-it {
+    $self: &;
+    flex-flow: column;
 
+    #{ $self }__paper {
+      padding: 20px 20px 20px 20px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      #{ $self }__content{
+        height: 100%;
+
+        #{ $self }__page #{ $self }__container #{ $self }__column {
+          margin-bottom: 5px;
+          flex-basis: 40%;
+          &:nth-last-child(2) {
+            margin-right: 0;
+          }
+          &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+          }
+
+          #{ $self }__pig {
+            width: 6em;
+            right: 100px;
+            bottom:0px;
+          }
+
+          #{ $self }__sun {
+            width: 3em;
+            right: 20px;
+            bottom:0;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-
-}
-
-@media only screen and (min-width: 1201px) {
-
 }

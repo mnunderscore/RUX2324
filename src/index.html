@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Caffeine Factory</title>
-        <link rel="shortcut icon" href="/assets/images/Logo.svg">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Meta pour Facebook -->
-        <meta property="og:title" content="Caffeine Factory">
-        <meta property="og:description" content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
-        <meta property="og:image" content="/assets/images/Logo.svg">
-        <meta property="og:url" content= "URL de notre page">
-        <meta property="og:type" content="website">
+<head>
+    <title>Caffeine Factory</title>
+    <link rel="shortcut icon" href="/assets/images/Logo.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Meta pour Twitter -->
-        <meta name="twitter:title" content="Caffeine Factory">
-        <meta name="twitter:description" content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
-        <meta name="twitter:image" content="/assets/images/Logo.svg">
-        <meta name="twitter:card" content="summary_large_image">
+    <!-- Meta pour Facebook -->
+    <meta property="og:title" content="Caffeine Factory">
+    <meta property="og:description"
+        content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
+    <meta property="og:image" content="/assets/images/Logo.svg">
+    <meta property="og:url" content="URL de notre page">
+    <meta property="og:type" content="website">
 
-        <!-- Meta pour Google -->
-        <meta name="description" content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
+    <!-- Meta pour Twitter -->
+    <meta name="twitter:title" content="Caffeine Factory">
+    <meta name="twitter:description"
+        content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
+    <meta name="twitter:image" content="/assets/images/Logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Meta pour Google -->
+    <meta name="description"
+        content="Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail. Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.">
 
 
-        <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/app.css">
 
-        <script src="scripts/app.js" defer></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    </head>
-    <body>
+    <script src="scripts/app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 
-        <div class="post-it">
+<body>
 
-            <!-- TODO: supprimer code inutile si il n'est pas utilisé -->
+    <div class="post-it">
 
-            <!-- TODO: burger menu seulement sur TELEPHONE
+        <!-- TODO: supprimer code inutile si il n'est pas utilisé -->
+
+        <!-- TODO: burger menu seulement sur TELEPHONE
                 <div class="post-it__nav">
                 <span class="close">CLOSE</span>
                 <div class="post-it__navlinks">
@@ -53,42 +58,53 @@
                 </div>
             </div> -->
 
-            <div class="post-it__paper">
-                <div class="post-it__content">
-                    <div class="post-it__page post-it__page--active" id="page1">
-                        <!-- Contenu page 1 -->
+        <div class="post-it__paper">
+            <div class="post-it__content">
+                <div class="post-it__page post-it__page--active" id="page1">
+                    <!-- Contenu page 1 -->
+                    <section class="post-it__container">
 
-                        <section class="post-it__container">
+                        <div class="post-it__column">
+                            <section>
+                                <img src="assets/images/Logo_temp.png" alt="Logo Page1">
+                            </section>
+                            <section>
+                                <h2>Modulable</h2>
+                                <p>Enlever, ajouter ou même les conserver, les mémos sont libre et facile grâce à leur
+                                    caractère amovible.</p>
+                            </section>
+                        </div>
 
-                            <div class="post-it__column">
-                                <section>
-                                    <img src="assets/images/Logo_temp.png" alt="Logo Page1">
-                                </section>
-                                <section>
-                                    <h2>Modulable</h2>
-                                    <p>Enlever, ajouter ou même les conserver, les mémos sont libre et facile grâce à leur caractère amovible.</p>
-                                </section>
-                            </div>
+                        <div class="post-it__column">
+                            <section>
+                                <h2>Memento</h2>
+                                <p>Découvrez notre dernière création conçue pour vous aider à améliorer votre
+                                    environnement de travail.</p>
+                                <p>Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous
+                                    accompagner dans l'apprentissage de diverses matières.</p>
+                            </section>
+                            <section>
+                                <svg class="post-it__pig" xmlns="http://www.w3.org/2000/svg" class="post-it__pig"
+                                    data-name="Calque 1" viewBox="0 0 120.5 183.8">
+                                    <path
+                                        d="M36 165c-4-2-8-6-11-10-3-6-5-12-6-19-2-17 3-33 12-47 1-3 4-5 7-7l-1-1c-10-6-17-14-19-26-2-8 0-16 6-23l1-2c-4-4-8-8-14-9l-8-1c-3-1-4-3-2-6 2-4 5-6 9-8 4-3 9-5 14-6 4 0 6 1 7 4l3 11 1 8 6-2 6-1 1-1 5-2c8 0 15 1 23 4l14 5 4-6 6-8c2-3 5-3 8 0l11 13c1 3 2 6 1 9 0 1 0 3-2 3-1 1-2 0-3-1-4-4-13-4-17 0 4 8 4 17 0 26-3 9-8 16-16 21 7 4 9 11 11 18 5 18 2 34-6 50l-1 3 4 2v-6c1-3 3-4 5-5 2 0 4 1 4 4 1 4-1 6-4 8 2 2 3 3 5 2l8-2c-3 5-10 9-16 3l-1-1c-2 0-5-1-6-3l-6 7-1 1v13l-1 2c0 2-2 2-4 1-2-2-2-2-3 0-1 1-2 2-3 1l-2-2-1-8H52l-3 9-2 2c-1 2-3 2-4 0l-1-3-2 1c-2 1-4 0-4-2l-1-2v-5l1-6Zm43-80c-9 5-18 6-28 3l-11-5-1 2c-7 6-11 14-14 23-3 11-5 23-1 34 4 18 20 29 40 26 6-2 11-5 15-10a62 62 0 0 0 11-56c-2-5-4-10-8-13l-3-4Zm18-36v-1c0-8-4-15-11-18l-16-7-8-1H48c-9 2-16 6-22 13-4 5-6 11-5 17 0 8 4 14 9 19 5 6 13 10 20 12 7 3 13 3 20 2 17-4 27-23 27-36ZM33 25l-2-7-3-12c-1-2-1-3-4-2-7 1-14 4-19 11l-1 2c10 0 18 4 24 11l5-3Zm63 7c7-4 14-4 21 0l-3-5c-2-5-5-8-8-12-2-2-2-2-4 0L92 28l4 4ZM48 171l-10-4 1 9c3-2 3-2 6 2l3-7Zm19-1 1 6c2-2 4-2 6-1v-8l-7 3Zm27-15 2-5v-1l-2 1v5Z"
+                                        class="cls-1" />
+                                    <path
+                                        d="m75 126-2 2h-3l-1-2a2117 2117 0 0 1 1-13l2-1 1 2v8c3-1 3-1 6 3 2-4 1-9 5-12 2 2 1 4 1 7l-3 8-2 2c-2 1-3 0-4-2l-1-2Zm-27-13c1 5-1 8-3 12-1 2-3 2-5 0l-2-4-3 2c-2 1-4 0-4-3l1-8 1-2 1-1 1 2v7c3-1 5 0 7 3l2-5 4-3Zm7-39c-5-1-9-2-12-5-7-6-7-15 1-19 5-3 11-4 17-2h2l3 2c3 5 5 10 3 16-1 4-5 6-9 7l-5 1Zm1-4 5-2c3-1 4-2 5-5l-2-9c-1-2-2-3-4-3h-8c-2 0-5 1-7 3-3 3-4 7-2 10 3 4 7 5 13 6ZM42 42c-2 0-3-1-3-2 0-2 1-3 2-3 2 0 4 1 4 3l-3 2Zm33 5-2-3c0-2 1-3 2-3 2 0 3 1 3 3 0 1-1 3-3 3Z"
+                                        class="cls-1" />
+                                    <path d="M60 62c0 1 0 3-2 3l-1-3c0-2 0-3 2-3l1 3Zm-13-2 2-2 1 2-1 2c-1 0-2 0-2-2Z"
+                                        class="cls-1" />
+                                </svg>
+                                <svg class="post-it__sun" xmlns="http://www.w3.org/2000/svg" data-name="Calque 1"
+                                    viewBox="0 0 105.25 114.13">
+                                    <path
+                                        d="M78.52 56.78c-.16 12.2-9.83 24.41-20.55 26.8-7.27 1.62-16.11-2.15-20.71-8.96-5.38-7.96-5.35-16.4-2.08-25.11 2.17-5.77 5.68-10.37 11.23-13.25 3.6-1.87 7.39-2.76 11.28-1.25 3.5 1.35 6.89 3 10.25 4.66 2.89 1.43 5.01 3.73 6.57 6.54 2 3.59 3.87 7.23 3.99 10.58h.02Zm-4.26 1.98c.08-4.27-1.47-6.92-2.86-9.61-1.07-2.07-2.32-4.13-4.45-5.21-3.69-1.86-7.49-3.51-11.26-5.22-.38-.17-.85-.17-1.28-.18-3.82-.08-7.08 1.39-9.87 3.83-3.24 2.83-4.87 6.67-6.13 10.65-2.18 6.91-1.76 13.6 2.71 19.53 3.85 5.11 9.05 7.75 15.61 6.84 3.3-.46 6.05-2.22 8.49-4.4 5.18-4.63 8.61-10.2 9.04-16.24ZM11.9 9.15c5.54 2.59 17.31 20.9 17.02 26.85-.89-.56-1.8-.84-2.26-1.46-4.01-5.49-7.95-11.02-11.89-16.57-1.86-2.61-2.42-5.66-2.88-8.82h.01ZM61.76 0c.29 1.66.77 2.99.7 4.29-.34 6.06-.77 12.11-1.34 18.15-.13 1.39-.75 2.81-1.42 4.06-.33.61-1.31 1.23-1.99 1.22-1.03-.02-1.28-1.04-1.16-1.98.27-2.1.68-4.18.85-6.29.28-3.46.35-6.93.61-10.39.25-3.25 1.01-6.34 3.75-9.06Zm18.97 114.13c-.96-1.13-2.11-2.14-2.83-3.4-2.87-5.07-5.68-10.18-8.36-15.36-.82-1.59-1.21-3.41-1.65-5.17-.1-.39.34-1.22.7-1.34.4-.14 1.02.27 1.49.52.23.12.4.42.54.67 3.15 5.3 6.34 10.59 9.42 15.93 1.17 2.02 1.88 4.23 1.42 6.64-.09.46-.19.91-.29 1.37-.15.05-.3.09-.45.14Zm1.7-67.85c-1.32-.18-1.9-1.12-1.16-2.15.46-.63 1.16-1.19 1.87-1.53 5.42-2.54 10.85-5.03 16.31-7.49.82-.37 1.77-.74 2.63-.66.72.06 1.71.62 1.99 1.23.23.51-.23 1.54-.68 2.1-.41.52-1.2.78-1.86 1.05-4.85 2.02-9.7 4.04-14.58 6-1.46.59-3.01.97-4.52 1.44Zm22.81 37.46c.04 1.51-.93 2.39-2.11 2.16-.68-.14-1.36-.49-1.94-.89-4.89-3.44-9.78-6.9-14.63-10.4-.84-.61-1.61-1.39-2.2-2.24-.29-.41-.32-1.34-.03-1.71.24-.31 1.17-.36 1.66-.16 1.07.42 2.1.99 3.05 1.64 5.11 3.47 10.2 6.97 15.27 10.5.47.32.76.9.94 1.11ZM20.93 66.32c-1.28-.59-2.47-.94-3.41-1.62-2.8-2.03-5.96-3.03-9.25-3.88-2.3-.6-4.5-1.67-6.68-2.66-.97-.44-1.81-1.25-1.54-2.5.07-.31.71-.79.98-.73 4.26.99 8.52 1.99 12.74 3.15 1.41.39 2.76 1.14 4.02 1.92 2.18 1.35 3.05 3.47 3.14 6.33Zm-.04 42.39c.02-2.3.61-3.94 1.88-5.27 1.83-1.92 3.79-3.71 5.61-5.65 1.92-2.04 3.72-4.18 5.6-6.25.48-.53.99-1.1 1.61-1.42.44-.23 1.23-.28 1.58-.03.31.22.41 1.05.26 1.5-.32.95-.78 1.88-1.33 2.71-3.14 4.68-7.01 8.72-11.21 12.44-.99.88-2.44 1.23-4 1.98Z"
+                                        class="cls-1" />
+                                </svg>
+                            </section>
+                        </div>
 
-                            <div class="post-it__column">
-                                <section>
-                                    <h2>Memento</h2>
-                                    <p>Découvrez notre dernière création conçue pour vous aider à améliorer votre environnement de travail.</p>
-                                    <p>Fabriqué à partir de matériaux de qualité, il est conçu pour durer et vous accompagner dans l'apprentissage de diverses matières.</p>
-                                </section>
-                                <section>
-                                    <svg class="post-it__pig" xmlns="http://www.w3.org/2000/svg" class="post-it__pig" data-name="Calque 1" viewBox="0 0 120.5 183.8">
-                                        <path d="M36 165c-4-2-8-6-11-10-3-6-5-12-6-19-2-17 3-33 12-47 1-3 4-5 7-7l-1-1c-10-6-17-14-19-26-2-8 0-16 6-23l1-2c-4-4-8-8-14-9l-8-1c-3-1-4-3-2-6 2-4 5-6 9-8 4-3 9-5 14-6 4 0 6 1 7 4l3 11 1 8 6-2 6-1 1-1 5-2c8 0 15 1 23 4l14 5 4-6 6-8c2-3 5-3 8 0l11 13c1 3 2 6 1 9 0 1 0 3-2 3-1 1-2 0-3-1-4-4-13-4-17 0 4 8 4 17 0 26-3 9-8 16-16 21 7 4 9 11 11 18 5 18 2 34-6 50l-1 3 4 2v-6c1-3 3-4 5-5 2 0 4 1 4 4 1 4-1 6-4 8 2 2 3 3 5 2l8-2c-3 5-10 9-16 3l-1-1c-2 0-5-1-6-3l-6 7-1 1v13l-1 2c0 2-2 2-4 1-2-2-2-2-3 0-1 1-2 2-3 1l-2-2-1-8H52l-3 9-2 2c-1 2-3 2-4 0l-1-3-2 1c-2 1-4 0-4-2l-1-2v-5l1-6Zm43-80c-9 5-18 6-28 3l-11-5-1 2c-7 6-11 14-14 23-3 11-5 23-1 34 4 18 20 29 40 26 6-2 11-5 15-10a62 62 0 0 0 11-56c-2-5-4-10-8-13l-3-4Zm18-36v-1c0-8-4-15-11-18l-16-7-8-1H48c-9 2-16 6-22 13-4 5-6 11-5 17 0 8 4 14 9 19 5 6 13 10 20 12 7 3 13 3 20 2 17-4 27-23 27-36ZM33 25l-2-7-3-12c-1-2-1-3-4-2-7 1-14 4-19 11l-1 2c10 0 18 4 24 11l5-3Zm63 7c7-4 14-4 21 0l-3-5c-2-5-5-8-8-12-2-2-2-2-4 0L92 28l4 4ZM48 171l-10-4 1 9c3-2 3-2 6 2l3-7Zm19-1 1 6c2-2 4-2 6-1v-8l-7 3Zm27-15 2-5v-1l-2 1v5Z" class="cls-1"/>
-                                        <path d="m75 126-2 2h-3l-1-2a2117 2117 0 0 1 1-13l2-1 1 2v8c3-1 3-1 6 3 2-4 1-9 5-12 2 2 1 4 1 7l-3 8-2 2c-2 1-3 0-4-2l-1-2Zm-27-13c1 5-1 8-3 12-1 2-3 2-5 0l-2-4-3 2c-2 1-4 0-4-3l1-8 1-2 1-1 1 2v7c3-1 5 0 7 3l2-5 4-3Zm7-39c-5-1-9-2-12-5-7-6-7-15 1-19 5-3 11-4 17-2h2l3 2c3 5 5 10 3 16-1 4-5 6-9 7l-5 1Zm1-4 5-2c3-1 4-2 5-5l-2-9c-1-2-2-3-4-3h-8c-2 0-5 1-7 3-3 3-4 7-2 10 3 4 7 5 13 6ZM42 42c-2 0-3-1-3-2 0-2 1-3 2-3 2 0 4 1 4 3l-3 2Zm33 5-2-3c0-2 1-3 2-3 2 0 3 1 3 3 0 1-1 3-3 3Z" class="cls-1"/>
-                                        <path d="M60 62c0 1 0 3-2 3l-1-3c0-2 0-3 2-3l1 3Zm-13-2 2-2 1 2-1 2c-1 0-2 0-2-2Z" class="cls-1"/>
-                                    </svg>
-                                    <svg class="post-it__sun" xmlns="http://www.w3.org/2000/svg" data-name="Calque 1" viewBox="0 0 105.25 114.13">
-                                        <path d="M78.52 56.78c-.16 12.2-9.83 24.41-20.55 26.8-7.27 1.62-16.11-2.15-20.71-8.96-5.38-7.96-5.35-16.4-2.08-25.11 2.17-5.77 5.68-10.37 11.23-13.25 3.6-1.87 7.39-2.76 11.28-1.25 3.5 1.35 6.89 3 10.25 4.66 2.89 1.43 5.01 3.73 6.57 6.54 2 3.59 3.87 7.23 3.99 10.58h.02Zm-4.26 1.98c.08-4.27-1.47-6.92-2.86-9.61-1.07-2.07-2.32-4.13-4.45-5.21-3.69-1.86-7.49-3.51-11.26-5.22-.38-.17-.85-.17-1.28-.18-3.82-.08-7.08 1.39-9.87 3.83-3.24 2.83-4.87 6.67-6.13 10.65-2.18 6.91-1.76 13.6 2.71 19.53 3.85 5.11 9.05 7.75 15.61 6.84 3.3-.46 6.05-2.22 8.49-4.4 5.18-4.63 8.61-10.2 9.04-16.24ZM11.9 9.15c5.54 2.59 17.31 20.9 17.02 26.85-.89-.56-1.8-.84-2.26-1.46-4.01-5.49-7.95-11.02-11.89-16.57-1.86-2.61-2.42-5.66-2.88-8.82h.01ZM61.76 0c.29 1.66.77 2.99.7 4.29-.34 6.06-.77 12.11-1.34 18.15-.13 1.39-.75 2.81-1.42 4.06-.33.61-1.31 1.23-1.99 1.22-1.03-.02-1.28-1.04-1.16-1.98.27-2.1.68-4.18.85-6.29.28-3.46.35-6.93.61-10.39.25-3.25 1.01-6.34 3.75-9.06Zm18.97 114.13c-.96-1.13-2.11-2.14-2.83-3.4-2.87-5.07-5.68-10.18-8.36-15.36-.82-1.59-1.21-3.41-1.65-5.17-.1-.39.34-1.22.7-1.34.4-.14 1.02.27 1.49.52.23.12.4.42.54.67 3.15 5.3 6.34 10.59 9.42 15.93 1.17 2.02 1.88 4.23 1.42 6.64-.09.46-.19.91-.29 1.37-.15.05-.3.09-.45.14Zm1.7-67.85c-1.32-.18-1.9-1.12-1.16-2.15.46-.63 1.16-1.19 1.87-1.53 5.42-2.54 10.85-5.03 16.31-7.49.82-.37 1.77-.74 2.63-.66.72.06 1.71.62 1.99 1.23.23.51-.23 1.54-.68 2.1-.41.52-1.2.78-1.86 1.05-4.85 2.02-9.7 4.04-14.58 6-1.46.59-3.01.97-4.52 1.44Zm22.81 37.46c.04 1.51-.93 2.39-2.11 2.16-.68-.14-1.36-.49-1.94-.89-4.89-3.44-9.78-6.9-14.63-10.4-.84-.61-1.61-1.39-2.2-2.24-.29-.41-.32-1.34-.03-1.71.24-.31 1.17-.36 1.66-.16 1.07.42 2.1.99 3.05 1.64 5.11 3.47 10.2 6.97 15.27 10.5.47.32.76.9.94 1.11ZM20.93 66.32c-1.28-.59-2.47-.94-3.41-1.62-2.8-2.03-5.96-3.03-9.25-3.88-2.3-.6-4.5-1.67-6.68-2.66-.97-.44-1.81-1.25-1.54-2.5.07-.31.71-.79.98-.73 4.26.99 8.52 1.99 12.74 3.15 1.41.39 2.76 1.14 4.02 1.92 2.18 1.35 3.05 3.47 3.14 6.33Zm-.04 42.39c.02-2.3.61-3.94 1.88-5.27 1.83-1.92 3.79-3.71 5.61-5.65 1.92-2.04 3.72-4.18 5.6-6.25.48-.53.99-1.1 1.61-1.42.44-.23 1.23-.28 1.58-.03.31.22.41 1.05.26 1.5-.32.95-.78 1.88-1.33 2.71-3.14 4.68-7.01 8.72-11.21 12.44-.99.88-2.44 1.23-4 1.98Z" class="cls-1"/>
-                                    </svg>
-                                </section>
-                            </div>
-
-                        </section>
+                    </section>
 
                     </div>
                     <div class="post-it__page" id="page2">
@@ -98,37 +114,39 @@
 
                         <section class="post-it__container">
 
-                            <div class="post-it__column">
-                                <section class="post-it__prototype">
-                                    <img class="post-it__prototype-img" src="assets/images/Prototype.png" alt="Logo Page1">
-                                </section>
-                            </div>
+                        <div class="post-it__column">
+                            <section class="post-it__prototype">
+                                <img class="post-it__prototype-img" src="assets/images/Prototype.png" alt="Logo Page1">
+                            </section>
+                        </div>
 
-                            <div class="post-it__column">
-                                <section>
-                                    <h2>Dispositif en schéma</h2>
-                                    <p>Notre dispositif est constitue d’un cadre en bois octogonal pour accueillir différentes ficelles. </p>
-                                    <p>Cette toile permet d’y agencer divers mémos au moyen de pinces à linge.</p>
-                                    <p>Le support dispose également d’une boite de rangement, qui contient des memos et pinces supplémentaire.</p>
-                                </section>
-                            </div>
+                        <div class="post-it__column">
+                            <section>
+                                <h2>Dispositif en schéma</h2>
+                                <p>Notre dispositif est constitue d’un cadre en bois octogonal pour accueillir
+                                    différentes ficelles. </p>
+                                <p>Cette toile permet d’y agencer divers mémos au moyen de pinces à linge.</p>
+                                <p>Le support dispose également d’une boite de rangement, qui contient des memos et
+                                    pinces supplémentaire.</p>
+                            </section>
+                        </div>
 
-                        </section>
-                        <img class="post-it__small-logo" src="assets/images/Logo_temp.png" alt="Logo Page1">
-                    </div>
-                    <div class="post-it__page" id="page3">
-                        <!-- contenu page 3 -->
+                    </section>
+                    <img class="post-it__small-logo" src="assets/images/Logo_temp.png" alt="Logo Page1">
+                </div>
+                <div class="post-it__page" id="page3">
+                    <!-- contenu page 3 -->
+                    <section class="post-it__container">
 
-                        <section class="post-it__container">
-
-                            <div class="post-it__column">
-                                <section>
-                                    <h2>Avantages</h2>
-                                </section>
-                                <section class="post-it__small post-it__small--first">
-                                    <p>Le design sera inspirée par le coté artistique et utile avec des couleurs douces. </p>
-                                </section>
-                            </div>
+                        <div class="post-it__column">
+                            <section>
+                                <h2>Avantages</h2>
+                            </section>
+                            <section class="post-it__small post-it__small--first">
+                                <p>Le design sera inspirée par le coté artistique et utile avec des couleurs douces.
+                                </p>
+                            </section>
+                        </div>
 
                             <div class="post-it__column">
                                 <section class="post-it__small post-it__small--second">
@@ -159,50 +177,50 @@
 
                         <div id="post-it__carousel">
 
-                            <div class="hideLeft">
-                             <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
-                           </div>
-                     
-                           <div class="prevLeftSecond">
-                             <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-                           </div>
-                     
-                           <div class="prev">
-                             <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
-                           </div>
-                     
-                           <div class="selected">
-                             <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
-                           </div>
-                     
-                           <div class="next">
-                             <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-                           </div>
-                     
-                           <div class="nextRightSecond">
-                             <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-                           </div>
-                     
-                           <div class="hideRight">
-                             <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-                           </div>
-                     
-                         </div>
-                     
-                         <div class="buttons">
-                           <button id="prev">Prev</button>
-                           <button id="next">Next</button>
-                         </div>
-                        <img class="post-it__small-logo" src="assets/images/Logo_temp.png" alt="Logo Page1">
+                        <div class="hideLeft">
+                            <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+                        </div>
+
+                        <div class="prevLeftSecond">
+                            <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+                        </div>
+
+                        <div class="prev">
+                            <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+                        </div>
+
+                        <div class="selected">
+                            <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+                        </div>
+
+                        <div class="next">
+                            <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+                        </div>
+
+                        <div class="nextRightSecond">
+                            <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+                        </div>
+
+                        <div class="hideRight">
+                            <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+                        </div>
+
                     </div>
-                </div>
-                <div class="post-it__corner">
+
+                    <div class="buttons">
+                        <button id="prev">Prev</button>
+                        <button id="next">Next</button>
+                    </div>
+                    <img class="post-it__small-logo" src="assets/images/Logo_temp.png" alt="Logo Page1">
                 </div>
             </div>
+            <!-- <div class="post-it__corner">
+                </div> -->
+        </div>
 
-                <!-- TODO EN COURS: intégrer doodles comme sur le figma -->
+        <!-- TODO EN COURS: intégrer doodles comme sur le figma -->
 
-                <!-- TODO: burger menu seulement sur TELEPHONE
+        <!-- TODO: burger menu seulement sur TELEPHONE
                 <div class="post-it__corner">
                 </div> -->
 
@@ -214,23 +232,26 @@
                         </svg>
                     </button>
 
-                    <button class="footer__slider footer__slider--active" id="idee">Idée</button>
-                    <button class="footer__slider" id="dispositif">Dispositif</button>
-                    <button class="footer__slider" id="avantages">Avantages</button>
-                    <button class="footer__slider" id="projets">Projets</button>
-                    <button class="footer__slider" id="produit">Produit Final </button>
+                <button class="footer__slider footer__slider--active" id="idee">Idée</button>
+                <button class="footer__slider" id="dispositif">Dispositif</button>
+                <button class="footer__slider" id="avantages">Avantages</button>
+                <button class="footer__slider" id="projets">Projets</button>
+                <button class="footer__slider" id="produit">Produit Final </button>
 
-                    <button class="footer__next-btn">
-                        <svg class="footer__arrow" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.38 49.15">
-                            <path d="M.08 45.27c.19-4.31.43-8.61.55-12.92.17-6.5.34-13.01.33-19.51C.96 9.15.62 5.46.42 1.78.35.56 1.1-.22 2.27.05 2.92.2 3.54.56 4.12.9c12.47 7.3 24.93 14.61 37.39 21.93 2.43 1.42 2.51 2.04.11 3.47-4.65 2.77-9.36 5.42-14.07 8.07-6.92 3.89-13.88 7.72-20.81 11.6-1.49.83-2.91 1.79-4.34 2.72-1.28.84-2.09.51-2.23-.96-.08-.82-.12-1.64-.17-2.46h.08Z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="footer__copyright">
-                    © 2023-2024 Copyright DWT_
-                </div>
+                <button class="footer__next-btn">
+                    <svg class="footer__arrow" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 43.38 49.15">
+                        <path
+                            d="M.08 45.27c.19-4.31.43-8.61.55-12.92.17-6.5.34-13.01.33-19.51C.96 9.15.62 5.46.42 1.78.35.56 1.1-.22 2.27.05 2.92.2 3.54.56 4.12.9c12.47 7.3 24.93 14.61 37.39 21.93 2.43 1.42 2.51 2.04.11 3.47-4.65 2.77-9.36 5.42-14.07 8.07-6.92 3.89-13.88 7.72-20.81 11.6-1.49.83-2.91 1.79-4.34 2.72-1.28.84-2.09.51-2.23-.96-.08-.82-.12-1.64-.17-2.46h.08Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="footer__copyright">
+                © 2023-2024 Copyright DWT_
             </div>
         </div>
+    </div>
 
-    </body>
+</body>
+
 </html>
