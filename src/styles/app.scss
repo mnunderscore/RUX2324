@@ -92,6 +92,15 @@ body {
                     transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
                 }
 
+                #{ $self }__rainbow {
+                  position: absolute;
+                  width: 6em;
+                  right: 70px;
+                  top: 50px;
+                  rotate: 35deg;
+                  fill: $doodle-color;
+              }
+
                 #{ $self }__container {
                     position: relative;
                     display: flex;
@@ -115,15 +124,16 @@ body {
                         #{ $self }__pig {
                             position: absolute;
                             width: 6em;
-                            right: 250px;
+                            right: 350px;
+                            bottom: -50px;
                             fill: $doodle-color;
                         }
 
                         #{ $self }__sun {
                             position: absolute;
                             width: 4em;
-                            right: 50px;
-                            bottom:150px;
+                            right: 150px;
+                            bottom:120px;
                             fill: $doodle-color;
                         }
 
