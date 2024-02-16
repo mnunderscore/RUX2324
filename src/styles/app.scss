@@ -132,6 +132,13 @@ body {
           fill: #{$doodle-color};
         }
 
+        #{ $self }__buttons {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          padding-top: 60px;
+        }
+
         #{ $self }__container {
           position: relative;
           display: flex;
@@ -300,13 +307,6 @@ body {
           }
         }
       }
-    }
-
-    .buttons {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      padding-top: 60px;
     }
 
     #{ $self }__small-logo {
