@@ -101,6 +101,14 @@ body {
                   fill: $doodle-color;
               }
 
+              #{ $self }__pirate {
+                position: absolute;
+                bottom: 50px;
+                right: 80px;
+                width: 4em;
+                fill: $doodle-color;
+            }
+
                 #{ $self }__container {
                     position: relative;
                     display: flex;
