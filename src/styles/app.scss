@@ -80,7 +80,6 @@ body {
       #{ $self }__page {
         opacity: 0;
         visibility: hidden;
-        height: 0;
         width: 0;
         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
@@ -409,27 +408,30 @@ body {
       #{ $self }__content {
         height: 100%;
 
-        #{ $self }__page #{ $self }__container #{ $self }__column {
-          margin-bottom: 5px;
-          flex-basis: 40%;
-          &:nth-last-child(2) {
-            margin-right: 0;
-          }
-          &:last-child {
-            flex-basis: 100%;
-            margin: 0;
-          }
+        #{ $self }__page{
 
-          #{ $self }__pig {
-            width: 6em;
-            right: 100px;
-            bottom: 0px;
-          }
+          #{ $self }__container #{ $self }__column {
+            margin-bottom: 5px;
+            flex-basis: 40%;
+            &:nth-last-child(2) {
+              margin-right: 0;
+            }
+            &:last-child {
+              flex-basis: 100%;
+              margin: 0;
+            }
 
-          #{ $self }__sun {
-            width: 3em;
-            right: 20px;
-            bottom: 0;
+            #{ $self }__pig {
+              width: 6em;
+              right: 100px;
+              bottom: 0px;
+            }
+
+            #{ $self }__sun {
+              width: 3em;
+              right: 20px;
+              bottom: 0;
+            }
           }
         }
       }
@@ -520,4 +522,18 @@ body {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1200px) {
+  .post-it {
+    $self: &;
+
+    #{ $self }__paper #{ $self }__content #{ $self }__page{
+          height:0;
+
+          &--active {
+            height: 100%;
+          }
+    }
+  }
 }
