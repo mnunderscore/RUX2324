@@ -8,16 +8,11 @@ body {
   color: $text-color;
 }
 
-.post-it__title,
-.post-it__nav .post-it__navlinks a {
+.post-it__title {
   font-family: "Shantell Sans", sans-serif;
   font-size: 1.78em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-}
-
-.post-it__nav .post-it__navlinks a {
-  font-weight: 800;
 }
 
 .footer {
@@ -35,8 +30,9 @@ body {
   body {
     font-size: $mobile-font-size;
   }
+
   .footer__slider {
-    font-size: $mobile-font-size;
+    font-size: 0.75em;
   }
 }
 
