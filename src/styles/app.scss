@@ -554,21 +554,63 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content #{ $self }__page #{ $self }__container #{ $self }__row {
-      #{ $self }__pig {
-        width: 25%;
-        right: 35%;
-        bottom: unset;
+    #{ $self }__paper #{ $self }__content #{ $self }__page {
+      #{ $self }__rainbow {
+        width: 5em;
+        right: 35px;
+        top: 35px;
       }
 
-      #{ $self }__sun {
-        width: 18%;
-        right: 8%;
-        bottom: unset;
+      #{ $self }__pirate {
+        width: 4em;
+        right: 20px;
+        bottom: -38%;
       }
 
-      #{ $self }__prototype-img {
-        width: 100%;
+      #{ $self }__flower {
+        width: 5em;
+        left: 10px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_1 {
+        width: 4em;
+        left: 100px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_2 {
+        width: 3em;
+        left: 180px;
+        bottom: 0;
+      }
+
+      #{ $self }__container {
+        #{ $self }__column {
+          #{ $self }__snail {
+            width: 4em;
+            top: 30px;
+            right: 20px;
+          }
+        }
+
+        #{ $self }__row {
+          #{ $self }__pig {
+            width: 25%;
+            right: 35%;
+            bottom: unset;
+          }
+
+          #{ $self }__sun {
+            width: 18%;
+            right: 8%;
+            bottom: unset;
+          }
+
+          #{ $self }__prototype-img {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -591,8 +633,8 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content #{ $self }__page #{ $self }__container {
-      #{ $self }__row {
+    #{ $self }__paper #{ $self }__content #{ $self }__page {
+      #{ $self }__container #{ $self }__row {
         #{ $self }__pig {
           width: 20%;
           right: 35%;
@@ -630,8 +672,8 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content #{ $self }__page #{ $self }__container {
-      #{ $self }__row {
+    #{ $self }__paper #{ $self }__content #{ $self }__page {
+      #{ $self }__container #{ $self }__row {
         #{ $self }__pig {
           width: 14%;
           right: 200px;
