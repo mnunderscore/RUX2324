@@ -116,7 +116,7 @@ body {
           fill: #{$doodle-color};
         }
 
-        #{ $self }__flower_1 {
+        #{ $self }__flower-1 {
           position: absolute;
           left: 200px;
           width: 4em;
@@ -124,7 +124,7 @@ body {
           fill: #{$doodle-color};
         }
 
-        #{ $self }__flower_2 {
+        #{ $self }__flower-2 {
           position: absolute;
           left: 350px;
           width: 3em;
@@ -572,13 +572,13 @@ body {
         bottom: 0;
       }
 
-      #{ $self }__flower_1 {
+      #{ $self }__flower-1 {
         width: 4em;
         left: 100px;
         bottom: 0;
       }
 
-      #{ $self }__flower_2 {
+      #{ $self }__flower-2 {
         width: 3em;
         left: 180px;
         bottom: 0;
@@ -652,13 +652,13 @@ body {
         bottom: 0;
       }
 
-      #{ $self }__flower_1 {
+      #{ $self }__flower-1 {
         width: 4em;
         left: 100px;
         bottom: 0;
       }
 
-      #{ $self }__flower_2 {
+      #{ $self }__flower-2 {
         width: 3em;
         left: 180px;
         bottom: 0;
@@ -733,19 +733,19 @@ body {
         bottom: 0;
       }
 
-      #{ $self }__flower_1 {
+      #{ $self }__flower-1 {
         width: 4em;
         left: 140px;
         bottom: 0;
       }
 
-      #{ $self }__flower_2 {
+      #{ $self }__flower-2 {
         width: 3em;
         left: 250px;
         bottom: 0;
       }
 
-      #{ $self }__container{
+      #{ $self }__container {
         #{ $self }__column {
           #{ $self }__snail {
             width: 4em;
@@ -801,13 +801,13 @@ body {
         bottom: 0;
       }
 
-      #{ $self }__flower_1 {
+      #{ $self }__flower-1 {
         width: 4em;
         left: 100px;
         bottom: 0;
       }
 
-      #{ $self }__flower_2 {
+      #{ $self }__flower-2 {
         width: 3em;
         left: 180px;
         bottom: 0;
