@@ -151,7 +151,6 @@ body {
 
           #{ $self }__row {
             flex: 1;
-            padding: 10px;
             display: flex;
 
             section {
@@ -634,21 +633,62 @@ body {
     $self: &;
 
     #{ $self }__paper #{ $self }__content #{ $self }__page {
-      #{ $self }__container #{ $self }__row {
-        #{ $self }__pig {
-          width: 20%;
-          right: 35%;
-          bottom: unset;
+      // TODO
+      #{ $self }__rainbow {
+        width: 5em;
+        right: 35px;
+        top: 35px;
+      }
+
+      #{ $self }__pirate {
+        width: 4em;
+        right: 20px;
+        top: 350px;
+      }
+
+      #{ $self }__flower {
+        width: 5em;
+        left: 10px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_1 {
+        width: 4em;
+        left: 100px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_2 {
+        width: 3em;
+        left: 180px;
+        bottom: 0;
+      }
+
+      #{ $self }__container {
+        #{ $self }__column {
+          #{ $self }__snail {
+            width: 4em;
+            top: -47px;
+            right: 20px;
+          }
         }
 
-        #{ $self }__sun {
-          width: 12%;
-          right: 10%;
-          bottom: unset;
-        }
+        #{ $self }__row {
+          #{ $self }__pig {
+            width: 20%;
+            right: 35%;
+            bottom: unset;
+          }
 
-        #{ $self }__prototype-img {
-          width: 100%;
+          #{ $self }__sun {
+            width: 12%;
+            right: 10%;
+            bottom: unset;
+          }
+
+          #{ $self }__prototype-img {
+            width: 100%;
+          }
         }
       }
     }
@@ -672,18 +712,60 @@ body {
   .post-it {
     $self: &;
 
+    //TODO
+
     #{ $self }__paper #{ $self }__content #{ $self }__page {
-      #{ $self }__container #{ $self }__row {
-        #{ $self }__pig {
-          width: 14%;
-          right: 200px;
-          bottom: unset;
+      #{ $self }__rainbow {
+        width: 5em;
+        right: 35px;
+        top: 35px;
+      }
+
+      #{ $self }__pirate {
+        width: 4em;
+        right: 50px;
+        top: 415px;
+      }
+
+      #{ $self }__flower {
+        width: 5em;
+        left: 10px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_1 {
+        width: 4em;
+        left: 140px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_2 {
+        width: 3em;
+        left: 250px;
+        bottom: 0;
+      }
+
+      #{ $self }__container{
+        #{ $self }__column {
+          #{ $self }__snail {
+            width: 4em;
+            top: -60px;
+            right: 20px;
+          }
         }
 
-        #{ $self }__sun {
-          width: 10%;
-          right: 75px;
-          bottom: unset;
+        #{ $self }__row {
+          #{ $self }__pig {
+            width: 14%;
+            right: 200px;
+            bottom: unset;
+          }
+
+          #{ $self }__sun {
+            width: 10%;
+            right: 75px;
+            bottom: unset;
+          }
         }
       }
     }
@@ -701,7 +783,45 @@ body {
         height: 100%;
       }
 
+      #{ $self }__rainbow {
+        width: 5em;
+        right: 35px;
+        top: 35px;
+      }
+
+      #{ $self }__pirate {
+        width: 4em;
+        right: 20px;
+        bottom: -38%;
+      }
+
+      #{ $self }__flower {
+        width: 5em;
+        left: 10px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_1 {
+        width: 4em;
+        left: 100px;
+        bottom: 0;
+      }
+
+      #{ $self }__flower_2 {
+        width: 3em;
+        left: 180px;
+        bottom: 0;
+      }
+
       #{ $self }__container #{ $self }__column {
+        #{ $self }__column {
+          #{ $self }__snail {
+            width: 4em;
+            top: 30px;
+            right: 20px;
+          }
+        }
+
         #{ $self }__row {
           #{ $self }__pig {
             right: 160px;
