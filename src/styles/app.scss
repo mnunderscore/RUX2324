@@ -152,14 +152,13 @@ body {
           #{ $self }__row {
             flex: 1;
             padding: 10px;
-            display:flex;
+            display: flex;
 
-            section{
-              width:50%
+            section {
+              width: 50%;
             }
 
             #{ $self }__logo-section {
-
               #{ $self }__big-logo {
                 width: 40%;
               }
@@ -571,7 +570,7 @@ body {
             margin-bottom: 25px;
           }
 
-          #{ $self }__container--row{
+          #{ $self }__container--row {
             flex-flow: row wrap;
 
             #{ $self }__row {
@@ -586,8 +585,8 @@ body {
                 margin: 0;
               }
 
-              section{
-                width:100%
+              section {
+                width: 100%;
               }
             }
           }
