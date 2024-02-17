@@ -36,7 +36,7 @@ body {
   #{ $self }__paper {
     margin: 25px;
     position: relative;
-    padding: 20px 120px 20px 120px;
+    padding: 20px 6% 20px 6%;
     background-color: $postit-1;
     flex-grow: 1;
     display: flex;
@@ -144,15 +144,46 @@ body {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
-          // TODO: les margins font sortir le post-it de l'écran
-          // margin: 5px 0;
+          &--row {
+            flex-flow: column wrap;
+            height: 100%;
+          }
+
+          #{ $self }__row {
+            flex: 1;
+            padding: 10px;
+            display:flex;
+
+            section{
+              width:50%
+            }
+
+            #{ $self }__logo-section {
+
+              #{ $self }__big-logo {
+                width: 40%;
+              }
+            }
+
+            #{ $self }__pig {
+              position: absolute;
+              width: 8%;
+              right: 25%;
+              bottom: 0;
+              fill: $doodle-color;
+            }
+
+            #{ $self }__sun {
+              position: absolute;
+              width: 5%;
+              right: 8%;
+              bottom: 120px;
+              fill: $doodle-color;
+            }
+          }
 
           #{ $self }__column {
             flex: 1;
-            // TODO: les margins font sortir le post-it de l'écran
-            // margin: 15px;
-            // margin-bottom: 5px;
-            // margin-top: 5px;
             padding: 10px;
             &:first-child {
               margin-left: 0;
@@ -162,22 +193,6 @@ body {
             }
 
             //Placement Images doodles
-
-            #{ $self }__pig {
-              position: absolute;
-              width: 6em;
-              right: 350px;
-              bottom: -50px;
-              fill: $doodle-color;
-            }
-
-            #{ $self }__sun {
-              position: absolute;
-              width: 4em;
-              right: 150px;
-              bottom: 120px;
-              fill: $doodle-color;
-            }
 
             #{ $self }__snail {
               position: absolute;
@@ -505,15 +520,15 @@ body {
             }
 
             #{ $self }__pig {
-              width: 6em;
-              right: 100px;
-              bottom: 0px;
+              width: 25%;
+              right: 35%;
+              bottom: -16%;
             }
 
             #{ $self }__sun {
-              width: 3em;
-              right: 20px;
-              bottom: 0;
+              width: 18%;
+              right: 8%;
+              bottom: -3%;
             }
 
             #{ $self }__prototype-img {
@@ -561,6 +576,27 @@ body {
             margin-bottom: 25px;
           }
 
+          #{ $self }__container--row{
+            flex-flow: row wrap;
+
+            #{ $self }__row {
+              flex-direction: column;
+              margin-bottom: 5px;
+              flex-basis: 40%;
+              &:nth-last-child(2) {
+                margin-right: 0;
+              }
+              &:last-child {
+                flex-basis: 100%;
+                margin: 0;
+              }
+
+              section{
+                width:100%
+              }
+            }
+          }
+
           #{ $self }__container #{ $self }__column {
             margin-bottom: 5px;
             flex-basis: 40%;
@@ -583,15 +619,15 @@ body {
             }
 
             #{ $self }__pig {
-              width: 6em;
-              right: 100px;
-              bottom: 0px;
+              width: 20%;
+              right: 35%;
+              bottom: -20%;
             }
 
             #{ $self }__sun {
-              width: 3em;
-              right: 20px;
-              bottom: 0;
+              width: 12%;
+              right: 10%;
+              bottom: -8%;
             }
 
             #{ $self }__prototype-img {
@@ -607,7 +643,7 @@ body {
     $self: &;
 
     #{ $self }__nav {
-      justify-content: space-between;
+      justify-content: space-around;
 
       #{ $self }__prev-btn,
       #{ $self }__next-btn {
@@ -657,15 +693,15 @@ body {
             }
 
             #{ $self }__pig {
-              width: 6em;
-              right: 100px;
-              bottom: 0px;
+              width: 14%;
+              right: 200px;
+              bottom: -231px;
             }
 
             #{ $self }__sun {
-              width: 3em;
-              right: 20px;
-              bottom: 0;
+              width: 10%;
+              right: 75px;
+              bottom: -85px;
             }
           }
         }
@@ -677,54 +713,25 @@ body {
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
   .post-it {
     $self: &;
-    flex-flow: column;
 
-    #{ $self }__paper {
-      padding: 20px 20px 20px 20px;
-      overflow-y: scroll;
-      overflow-x: hidden;
+    #{ $self }__paper #{ $self }__content #{ $self }__page {
+      height: 0;
 
-      #{ $self }__content {
+      &--active {
         height: 100%;
+      }
 
-        #{ $self }__page {
-          #{ $self }__small-logo {
-            position: relative;
-            width: 60px;
-            top: 20px;
-            left: 20px;
-            margin-bottom: 25px;
-          }
+      #{ $self }__container #{ $self }__column {
+        #{ $self }__pig {
+          right: 160px;
+          bottom: -100px;
+          width: 10%;
+        }
 
-          #{ $self }__container #{ $self }__column {
-            margin-bottom: 5px;
-            flex-basis: 40%;
-            &:nth-last-child(2) {
-              margin-right: 0;
-            }
-            &:last-child {
-              flex-basis: 100%;
-              margin: 0;
-            }
-
-            #{ $self }__logo-section {
-              display: flex;
-              justify-content: center;
-              margin-bottom: 50px;
-            }
-
-            #{ $self }__pig {
-              width: 6em;
-              right: 100px;
-              bottom: 0px;
-            }
-
-            #{ $self }__sun {
-              width: 3em;
-              right: 20px;
-              bottom: 0;
-            }
-          }
+        #{ $self }__sun {
+          right: 25px;
+          bottom: 10px;
+          width: 8%;
         }
       }
     }
