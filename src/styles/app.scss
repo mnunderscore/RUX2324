@@ -529,6 +529,8 @@ body {
     $self: &;
 
     #{ $self }__nav {
+      justify-content: space-between;
+
       #{ $self }__prev-btn,
       #{ $self }__next-btn {
         display: none;
@@ -605,6 +607,8 @@ body {
     $self: &;
 
     #{ $self }__nav {
+      justify-content: space-between;
+
       #{ $self }__prev-btn,
       #{ $self }__next-btn {
         display: none;
@@ -650,10 +654,6 @@ body {
               display: flex;
               justify-content: center;
               margin-bottom: 50px;
-
-              #{ $self }__big-logo {
-                width: 80%;
-              }
             }
 
             #{ $self }__pig {
@@ -667,10 +667,6 @@ body {
               right: 20px;
               bottom: 0;
             }
-
-            #{ $self }__prototype-img {
-              width: 100%;
-            }
           }
         }
       }
@@ -679,6 +675,60 @@ body {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .post-it {
+    $self: &;
+    flex-flow: column;
+
+    #{ $self }__paper {
+      padding: 20px 20px 20px 20px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      #{ $self }__content {
+        height: 100%;
+
+        #{ $self }__page {
+          #{ $self }__small-logo {
+            position: relative;
+            width: 60px;
+            top: 20px;
+            left: 20px;
+            margin-bottom: 25px;
+          }
+
+          #{ $self }__container #{ $self }__column {
+            margin-bottom: 5px;
+            flex-basis: 40%;
+            &:nth-last-child(2) {
+              margin-right: 0;
+            }
+            &:last-child {
+              flex-basis: 100%;
+              margin: 0;
+            }
+
+            #{ $self }__logo-section {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 50px;
+            }
+
+            #{ $self }__pig {
+              width: 6em;
+              right: 100px;
+              bottom: 0px;
+            }
+
+            #{ $self }__sun {
+              width: 3em;
+              right: 20px;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
