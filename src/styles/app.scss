@@ -91,7 +91,12 @@ body {
             }
 
             #{ $self }__logo-section {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
               #{ $self }__big-logo {
+                fill: $accent-color;
                 width: 40%;
               }
             }
@@ -369,6 +374,7 @@ body {
     }
 
     #{ $self }__small-logo {
+      fill: $accent-color;
       position: absolute;
       width: 80px;
       top: 40px;
