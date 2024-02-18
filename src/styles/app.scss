@@ -238,8 +238,7 @@ body {
       text-align: inherit;
       appearance: none;
       color: $accent-color;
-      transition:
-        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
@@ -248,8 +247,7 @@ body {
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
         transform: scale(1.2);
-        transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
@@ -261,8 +259,7 @@ body {
       text-align: inherit;
       appearance: none;
       color: $accent-color;
-      transition:
-        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
@@ -271,8 +268,7 @@ body {
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
         transform: scale(1.2);
-        transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
@@ -286,11 +282,7 @@ body {
 
       div {
         position: absolute;
-        transition:
-          transform 1s,
-          left 1s,
-          opacity 1s,
-          z-index 0s;
+        transition: transform 1s, left 1s, opacity 1s, z-index 0s;
         opacity: 1;
 
         img {
@@ -413,15 +405,13 @@ body {
       cursor: pointer;
       color: $slider-text-color;
       transform: scale(1);
-      transition:
-        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &--active {
         color: $accent-color;
         transform: scale(1.1);
-        transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
 
@@ -430,8 +420,7 @@ body {
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1);
-        transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
