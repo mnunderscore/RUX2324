@@ -133,10 +133,8 @@ body {
         }
 
         #{ $self }__buttons {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
           padding-top: 60px;
+          text-align: center;
         }
 
         #{ $self }__container {
@@ -235,17 +233,19 @@ body {
       }
     }
 
-    .post-it__buttons button {
+    #{ self }__buttons #carousel__prev {
       margin-right: 40px;
     }
 
-    #next {
+    #carousel__next {
       background-color: transparent;
       border: none;
       text-align: inherit;
-      font: inherit;
       appearance: none;
       color: $accent-color;
+      transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
         cursor: pointer;
@@ -259,13 +259,15 @@ body {
       }
     }
 
-    #prev {
+    #carousel__prev {
       background-color: transparent;
       border: none;
       text-align: inherit;
-      font: inherit;
       appearance: none;
       color: $accent-color;
+      transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
         cursor: pointer;
@@ -300,7 +302,7 @@ body {
           transition: width 1s;
         }
 
-        &.hideLeft {
+        &.carousel__hide-left {
           left: 0%;
           opacity: 0;
           transform: translateY(50%) translateX(-50%);
@@ -310,7 +312,7 @@ body {
           }
         }
 
-        &.hideRight {
+        &.carousel__hide-right {
           left: 100%;
           opacity: 0;
           transform: translateY(50%) translateX(-50%);
@@ -320,7 +322,7 @@ body {
           }
         }
 
-        &.prev {
+        &.carousel__prev {
           z-index: 5;
           left: 30%;
           transform: translateY(50px) translateX(-50%);
@@ -330,7 +332,7 @@ body {
           }
         }
 
-        &.prevLeftSecond {
+        &.carousel__prev-left-second {
           z-index: 4;
           left: 15%;
           transform: translateY(50%) translateX(-50%);
@@ -341,13 +343,13 @@ body {
           }
         }
 
-        &.selected {
+        &.carousel__selected {
           z-index: 10;
           left: 50%;
           transform: translateY(0px) translateX(-50%);
         }
 
-        &.next {
+        &.carousel__next {
           z-index: 5;
           left: 70%;
           transform: translateY(50px) translateX(-50%);
@@ -357,7 +359,7 @@ body {
           }
         }
 
-        &.nextRightSecond {
+        &.carousel__next-right-second {
           z-index: 4;
           left: 85%;
           transform: translateY(50%) translateX(-50%);
@@ -543,7 +545,23 @@ body {
               margin: 0;
             }
           }
+
+          #{ $self }__buttons {
+            padding-top:15px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+          }
         }
+
+        #page3 #{ $self }__container {
+          align-items: flex-end;
+        }
+      }
+
+      #post-it__carousel {
+        top: unset;
+        transform: unset;
       }
     }
   }
@@ -553,66 +571,76 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content #{ $self }__page {
-      #{ $self }__rainbow {
-        width: 5em;
-        right: 35px;
-        top: 35px;
-      }
+    #{ $self }__paper #{ $self }__content{
+      #{ $self }__page {
+        #{ $self }__rainbow {
+          width: 5em;
+          right: 35px;
+          top: 35px;
+        }
 
-      #{ $self }__pirate {
-        width: 4em;
-        right: 20px;
-        bottom: -38%;
-      }
+        #{ $self }__pirate {
+          width: 4em;
+          right: 20px;
+          bottom: -38%;
+        }
 
-      #{ $self }__flower {
-        width: 5em;
-        left: 10px;
-        bottom: 0;
-      }
+        #{ $self }__flower {
+          width: 5em;
+          left: 10px;
+          bottom: 0;
+        }
 
-      #{ $self }__flower-1 {
-        width: 4em;
-        left: 100px;
-        bottom: 0;
-      }
+        #{ $self }__flower-1 {
+          width: 4em;
+          left: 100px;
+          bottom: 0;
+        }
 
-      #{ $self }__flower-2 {
-        width: 3em;
-        left: 180px;
-        bottom: 0;
-      }
+        #{ $self }__flower-2 {
+          width: 3em;
+          left: 180px;
+          bottom: 0;
+        }
 
-      #{ $self }__container {
-        #{ $self }__column {
-          #{ $self }__snail {
-            width: 4em;
-            top: 30px;
-            right: 20px;
+        #{ $self }__container {
+          #{ $self }__column {
+            #{ $self }__snail {
+              width: 4em;
+              top: 30px;
+              right: 20px;
+            }
+
+            #{ $self }__small {
+                margin-top: 0px;
+            }
           }
         }
 
-        #{ $self }__row {
-          #{ $self }__pig {
-            width: 25%;
-            right: 35%;
-            bottom: unset;
-          }
+          #{ $self }__row {
+            #{ $self }__pig {
+              width: 25%;
+              right: 35%;
+              bottom: unset;
+            }
 
-          #{ $self }__sun {
-            width: 18%;
-            right: 8%;
-            bottom: unset;
-          }
+            #{ $self }__sun {
+              width: 18%;
+              right: 8%;
+              bottom: unset;
+            }
 
-          #{ $self }__prototype-img {
-            width: 100%;
+            #{ $self }__prototype-img {
+              width: 100%;
+            }
           }
         }
+      }
+
+      #page3 #{ $self }__container {
+        flex-flow:column wrap;
       }
     }
-  }
 
   .footer {
     $self: &;
@@ -632,63 +660,72 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content #{ $self }__page {
-      #{ $self }__rainbow {
-        width: 5em;
-        right: 35px;
-        top: 35px;
-      }
-
-      #{ $self }__pirate {
-        width: 4em;
-        right: 20px;
-        top: 350px;
-      }
-
-      #{ $self }__flower {
-        width: 5em;
-        left: 10px;
-        bottom: 0;
-      }
-
-      #{ $self }__flower-1 {
-        width: 4em;
-        left: 100px;
-        bottom: 0;
-      }
-
-      #{ $self }__flower-2 {
-        width: 3em;
-        left: 180px;
-        bottom: 0;
-      }
-
-      #{ $self }__container {
-        #{ $self }__column {
-          #{ $self }__snail {
-            width: 4em;
-            top: -47px;
-            right: 20px;
-          }
+    #{ $self }__paper #{ $self }__content{
+      #{ $self }__page {
+        #{ $self }__rainbow {
+          width: 5em;
+          right: 35px;
+          top: 35px;
         }
 
-        #{ $self }__row {
-          #{ $self }__pig {
-            width: 20%;
-            right: 35%;
-            bottom: unset;
+        #{ $self }__pirate {
+          width: 4em;
+          right: 20px;
+          top: 350px;
+        }
+
+        #{ $self }__flower {
+          width: 5em;
+          left: 10px;
+          bottom: 0;
+        }
+
+        #{ $self }__flower-1 {
+          width: 4em;
+          left: 100px;
+          bottom: 0;
+        }
+
+        #{ $self }__flower-2 {
+          width: 3em;
+          left: 180px;
+          bottom: 0;
+        }
+
+        #{ $self }__container {
+          #{ $self }__column {
+            #{ $self }__snail {
+              width: 4em;
+              top: 30px;
+              right: 20px;
+            }
+            #{ $self }__small {
+              margin-top: 0px;
+            }
           }
 
-          #{ $self }__sun {
-            width: 12%;
-            right: 10%;
-            bottom: unset;
-          }
+          #{ $self }__row {
+            #{ $self }__pig {
+              width: 20%;
+              right: 35%;
+              bottom: unset;
+            }
 
-          #{ $self }__prototype-img {
-            width: 100%;
+            #{ $self }__sun {
+              width: 12%;
+              right: 10%;
+              bottom: unset;
+            }
+
+            #{ $self }__prototype-img {
+              width: 100%;
+            }
           }
         }
+      }
+
+      #page3 #{ $self }__container {
+        flex-flow:column wrap;
       }
     }
   }
@@ -811,26 +848,24 @@ body {
       }
 
       #{ $self }__container #{ $self }__column {
-        #{ $self }__column {
-          #{ $self }__snail {
-            width: 4em;
-            top: 30px;
-            right: 20px;
-          }
+        #{ $self }__snail {
+          width: 4em;
+          top: -35px;
+          right: 20px;
+        }
+      }
+
+      #{ $self }__row {
+        #{ $self }__pig {
+          right: 160px;
+          bottom: -100px;
+          width: 10%;
         }
 
-        #{ $self }__row {
-          #{ $self }__pig {
-            right: 160px;
-            bottom: -100px;
-            width: 10%;
-          }
-
-          #{ $self }__sun {
-            right: 25px;
-            bottom: 10px;
-            width: 8%;
-          }
+        #{ $self }__sun {
+          right: 25px;
+          bottom: 10px;
+          width: 8%;
         }
       }
     }

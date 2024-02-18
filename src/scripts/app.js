@@ -123,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function moveToSelected(element) {
   var selected;
-  if (element === "next") {
-    selected = $(".selected").next();
-  } else if (element === "prev") {
-    selected = $(".selected").prev();
+  if (element === "carousel__next") {
+    selected = $(".carousel__selected").next();
+  } else if (element === "carousel__prev") {
+    selected = $(".carousel__selected").prev();
   } else {
     selected = element;
   }
@@ -136,42 +136,42 @@ function moveToSelected(element) {
   var prevSecond = $(prev).prev();
   var nextSecond = $(next).next();
 
-  $(selected).removeClass().addClass("selected");
+  $(selected).removeClass().addClass("carousel__selected");
 
-  $(prev).removeClass().addClass("prev");
-  $(next).removeClass().addClass("next");
+  $(prev).removeClass().addClass("carousel__prev");
+  $(next).removeClass().addClass("carousel__next");
 
-  $(nextSecond).removeClass().addClass("nextRightSecond");
-  $(prevSecond).removeClass().addClass("prevLeftSecond");
+  $(nextSecond).removeClass().addClass("carousel__next-right-second");
+  $(prevSecond).removeClass().addClass("carousel__prev-left-second");
 
-  $(nextSecond).nextAll().removeClass().addClass("hideRight");
-  $(prevSecond).prevAll().removeClass().addClass("hideLeft");
+  $(nextSecond).nextAll().removeClass().addClass("carousel__hide-right");
+  $(prevSecond).prevAll().removeClass().addClass("carousel__hide-left");
 }
 
-$(document).keydown(function (e) {
-  switch (e.which) {
-    case 37: // left
-      moveToSelected("prev");
-      break;
+// $(document).on("keydown", function (e) {
+//   switch (e.which) {
+//     case 37: // left
+//       moveToSelected("prev");
+//       break;
 
-    case 39: // right
-      moveToSelected("next");
-      break;
+//     case 39: // right
+//       moveToSelected("next");
+//       break;
 
-    default:
-      return;
-  }
-  e.preventDefault();
-});
+//     default:
+//       return;
+//   }
+//   e.preventDefault();
+// });
 
-$("#post-it__carousel div").click(function () {
+$("#post-it__carousel div").on("click", function () {
   moveToSelected($(this));
 });
 
-$("#prev").click(function () {
-  moveToSelected("prev");
+$("#carousel__prev").on("click", function () {
+  moveToSelected("carousel__prev");
 });
 
-$("#next").click(function () {
-  moveToSelected("next");
+$("#carousel__next").on("click", function () {
+  moveToSelected("carousel__next");
 });
