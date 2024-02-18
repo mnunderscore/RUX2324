@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
     showPage(currentPageIndex);
     setActivePage(currentPageIndex);
   }
+  const smallLogo = document.querySelector(".post-it__small-logo");
+
+  smallLogo.addEventListener("click", () => setPage(0));
 });
 
 //carousel
