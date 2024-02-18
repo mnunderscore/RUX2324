@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setActivePage(index) {
-    const elements = [idee, dispositif, avantages, projets, produit];
+    const elements = [idee, dispositif, avantages, projets /*, produit */];
 
     elements.forEach((element, i) => {
       if (i === index) {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dispositif = document.querySelector("#dispositif");
   const avantages = document.querySelector("#avantages");
   const projets = document.querySelector("#projets");
-  const produit = document.querySelector("#produit");
+  // const produit = document.querySelector("#produit");
 
   nextBtn.addEventListener("click", goToNextPage);
   prevBtn.addEventListener("click", goToPreviousPage);
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   dispositif.addEventListener("click", () => setPage(1));
   avantages.addEventListener("click", () => setPage(2));
   projets.addEventListener("click", () => setPage(3));
-  produit.addEventListener("click", () => setPage(4));
+  // produit.addEventListener("click", () => setPage(4));
 
   function setPage(index) {
     currentPageIndex = index;

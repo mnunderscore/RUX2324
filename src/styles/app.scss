@@ -68,64 +68,8 @@ body {
         width: 0;
         transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
 
-        &--active {
-          opacity: 1;
-          visibility: visible;
-          height: 100%;
-          width: 100%;
-          transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
-        }
-
-        &#page4 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        #{ $self }__rainbow {
-          position: absolute;
-          width: 6em;
-          right: 70px;
-          top: 50px;
-          rotate: 35deg;
-          fill: $doodle-color;
-        }
-
-        #{ $self }__pirate {
-          position: absolute;
-          bottom: 50px;
-          right: 80px;
-          width: 4em;
-          fill: $doodle-color;
-        }
-
-        #{ $self }__flower {
-          position: absolute;
-          left: 50px;
-          width: 5em;
-          bottom: 0;
-          fill: #{$doodle-color};
-        }
-
-        #{ $self }__flower-1 {
-          position: absolute;
-          left: 200px;
-          width: 4em;
-          bottom: 0;
-          fill: #{$doodle-color};
-        }
-
-        #{ $self }__flower-2 {
-          position: absolute;
-          left: 350px;
-          width: 3em;
-          bottom: 0;
-          fill: #{$doodle-color};
-        }
-
-        #{ $self }__buttons {
-          padding-top: 60px;
-          text-align: center;
+        & * {
+          height: 0;
         }
 
         #{ $self }__container {
@@ -221,11 +165,71 @@ body {
             }
           }
         }
-      }
-    }
 
-    #{ self }__buttons #carousel__prev {
-      margin-right: 40px;
+        &--active {
+          opacity: 1;
+          visibility: visible;
+          height: 100%;
+          width: 100%;
+          transition: opacity cubic-bezier(0.42, 0, 0.58, 1) 0.5s;
+
+          & * {
+            height: unset;
+          }
+        }
+
+        &#page4 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        #{ $self }__rainbow {
+          position: absolute;
+          width: 6em;
+          right: 70px;
+          top: 50px;
+          rotate: 35deg;
+          fill: $doodle-color;
+        }
+
+        #{ $self }__pirate {
+          position: absolute;
+          bottom: 50px;
+          right: 80px;
+          width: 4em;
+          fill: $doodle-color;
+        }
+
+        #{ $self }__flower {
+          position: absolute;
+          left: 50px;
+          width: 5em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+        #{ $self }__flower-1 {
+          position: absolute;
+          left: 200px;
+          width: 4em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+        #{ $self }__flower-2 {
+          position: absolute;
+          left: 350px;
+          width: 3em;
+          bottom: 0;
+          fill: #{$doodle-color};
+        }
+
+        #{ $self }__buttons {
+          padding-top: 100px;
+          text-align: center;
+        }
+      }
     }
 
     #carousel__next {
@@ -235,8 +239,8 @@ body {
       appearance: none;
       color: $accent-color;
       transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
-          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
         cursor: pointer;
@@ -251,14 +255,15 @@ body {
     }
 
     #carousel__prev {
+      margin-right: 40px;
       background-color: transparent;
       border: none;
       text-align: inherit;
       appearance: none;
       color: $accent-color;
       transition:
-          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
-          transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
         cursor: pointer;
@@ -368,10 +373,6 @@ body {
       width: 80px;
       top: 40px;
       left: 40px;
-    }
-
-    #{ $self }__sub-content {
-      width: 33.3%;
     }
   }
 }
@@ -538,15 +539,16 @@ body {
           }
 
           #{ $self }__buttons {
+            padding-top: 50px;
             width: 100%;
             text-align: center;
             position: relative;
           }
 
           &#page4 #{ $self }__small-logo {
-            position:absolute;
-            top:40px;
-            left:40px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
           }
         }
 
@@ -558,36 +560,35 @@ body {
       #post-it__carousel {
         top: unset;
         transform: unset;
-        height:250px;
+        height: 250px;
 
         div {
-
           img {
             width: 250px;
           }
 
           &.carousel__hide-left img {
-              width: 125px;
+            width: 125px;
           }
 
           &.carousel__hide-right img {
-              width: 125px;
+            width: 125px;
           }
 
           &.carousel__prev img {
-              width: 150px;
+            width: 150px;
           }
 
           &.carousel__prev-left-second img {
-              width: 125px;
+            width: 125px;
           }
 
           &.carousel__next img {
-              width: 150px;
+            width: 150px;
           }
 
           &.carousel__next-right-second img {
-              width: 125px;
+            width: 125px;
           }
         }
       }
@@ -595,7 +596,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) and (max-height: 700px){
+@media only screen and (min-width: 320px) and (max-width: 480px) and (max-height: 700px) {
   .post-it {
     $self: &;
 
@@ -613,7 +614,6 @@ body {
 
     #{ $self }__paper #{ $self }__content {
       #{ $self }__page {
-
         #{ $self }__rainbow {
           width: 5em;
           right: 35px;
@@ -627,20 +627,20 @@ body {
         }
 
         #{ $self }__flower {
-          width: 5em;
+          width: 4em;
           left: 10px;
           bottom: 0;
         }
 
         #{ $self }__flower-1 {
-          width: 4em;
-          left: 100px;
+          width: 3em;
+          left: 85px;
           bottom: 0;
         }
 
         #{ $self }__flower-2 {
-          width: 3em;
-          left: 180px;
+          width: 2em;
+          left: 150px;
           bottom: 0;
         }
 
@@ -653,7 +653,7 @@ body {
             }
 
             #{ $self }__small {
-                margin-top: 0px;
+              margin-top: 0px;
             }
           }
 
@@ -665,7 +665,7 @@ body {
             }
 
             #{ $self }__sun {
-              width:2em;
+              width: 2em;
               right: 8%;
               bottom: unset;
             }
@@ -679,7 +679,7 @@ body {
     }
 
     #page3 #{ $self }__container {
-      flex-flow:column wrap;
+      flex-flow: column wrap;
     }
   }
 
@@ -701,7 +701,7 @@ body {
   .post-it {
     $self: &;
 
-    #{ $self }__paper #{ $self }__content{
+    #{ $self }__paper #{ $self }__content {
       #{ $self }__page {
         #{ $self }__rainbow {
           width: 5em;
@@ -766,7 +766,7 @@ body {
       }
 
       #page3 #{ $self }__container {
-        flex-flow:column wrap;
+        flex-flow: column wrap;
       }
     }
   }
