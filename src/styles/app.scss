@@ -856,7 +856,7 @@ body {
       #{ $self }__pirate {
         width: 4em;
         right: 20px;
-        bottom: -38%;
+        top:280px;
       }
 
       #{ $self }__flower {
@@ -911,6 +911,10 @@ body {
 
       &--active {
         height: 100%;
+      }
+
+      #{ $self }__container--row #{ $self }__row section h2 {
+          margin-top:0;
       }
     }
   }
