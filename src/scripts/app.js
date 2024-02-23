@@ -60,15 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setActivePage(index) {
     const elements = [idee, dispositif, avantages, projets /*, produit */];
-    const postItPaper = document.querySelector('.post-it__paper');
+    const postItPaper = document.querySelector(".post-it__paper");
 
     elements.forEach((element, i) => {
       if (i === index) {
         element.classList.add("footer__slider--active");
-        if (i === 3) { // Assuming page 4 corresponds to index 3
-          postItPaper.classList.add('post-it__paper--page4');
+        if (i === 3) {
+          // Assuming page 4 corresponds to index 3
+          postItPaper.classList.add("post-it__paper--page4");
         } else {
-          postItPaper.classList.remove('post-it__paper--page4');
+          postItPaper.classList.remove("post-it__paper--page4");
         }
       } else {
         element.classList.remove("footer__slider--active");

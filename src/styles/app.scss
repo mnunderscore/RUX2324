@@ -238,7 +238,8 @@ body {
       text-align: inherit;
       appearance: none;
       color: $accent-color;
-      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition:
+        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
@@ -247,7 +248,8 @@ body {
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
         transform: scale(1.2);
-        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
@@ -259,7 +261,8 @@ body {
       text-align: inherit;
       appearance: none;
       color: $accent-color;
-      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition:
+        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &:hover {
@@ -268,7 +271,8 @@ body {
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
         transform: scale(1.2);
-        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
@@ -282,7 +286,11 @@ body {
 
       div {
         position: absolute;
-        transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+        transition:
+          transform 1s,
+          left 1s,
+          opacity 1s,
+          z-index 0s;
         opacity: 1;
 
         img {
@@ -405,13 +413,15 @@ body {
       cursor: pointer;
       color: $slider-text-color;
       transform: scale(1);
-      transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+      transition:
+        color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
         transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
 
       &--active {
         color: $accent-color;
         transform: scale(1.1);
-        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
 
@@ -420,7 +430,8 @@ body {
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1);
-        transition: color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
+        transition:
+          color cubic-bezier(0.42, 0, 0.58, 1) 0.2s,
           transform cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
       }
     }
@@ -472,7 +483,7 @@ body {
       overflow-x: hidden;
 
       &--page4 {
-        overflow-y:hidden;
+        overflow-y: hidden;
       }
 
       #{ $self }__content {
@@ -860,7 +871,7 @@ body {
       #{ $self }__pirate {
         width: 4em;
         right: 20px;
-        top:280px;
+        top: 280px;
       }
 
       #{ $self }__flower {
@@ -918,7 +929,7 @@ body {
       }
 
       #{ $self }__container--row #{ $self }__row section h2 {
-          margin-top:0;
+        margin-top: 0;
       }
     }
   }
